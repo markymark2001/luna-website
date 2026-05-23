@@ -275,7 +275,6 @@ These techniques are part of systematic debugging and available under `docs/work
 
 - **`docs/workflows/debugging/root-cause-tracing.md`** - Trace bugs backward through call stack to find original trigger
 - **`docs/workflows/debugging/defense-in-depth.md`** - Add validation at multiple layers after finding root cause
-- **`docs/workflows/debugging/condition-based-waiting.md`** - Replace arbitrary timeouts with condition polling
 
 ## Real-World Impact
 
