@@ -716,14 +716,14 @@ h3,
 
 .site-footer__group h2 {
   margin-bottom: var(--space-2);
-  color: var(--burgundy-mute);
+  color: var(--burgundy-deep);
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
 }
 
 .site-footer__group a {
-  color: var(--burgundy-soft);
+  color: var(--burgundy);
   font-size: var(--small);
   font-weight: 400;
   line-height: 1.2;
@@ -738,12 +738,12 @@ h3,
   gap: var(--space-5);
   margin-top: var(--space-16);
   padding-top: var(--space-6);
-  color: var(--burgundy-mute);
+  color: var(--burgundy-soft);
   font-size: 13px;
 }
 
 .site-footer__bottom a {
-  color: var(--burgundy-soft);
+  color: var(--burgundy);
   font-weight: 500;
   text-decoration: none;
   transition: color var(--duration-base) var(--ease-out);
