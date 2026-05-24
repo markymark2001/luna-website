@@ -56,7 +56,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--cream-review);
+  background: var(--cream-body);
   color: var(--ink);
   font-family: var(--font-sans);
   line-height: 1.5;
@@ -65,7 +65,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  background: var(--cream-review);
+  background: var(--cream-body);
   color: var(--ink);
 }
 
@@ -327,7 +327,7 @@ h3,
 
 .features {
   padding: 92px 0 112px;
-  background: var(--cream-review);
+  background: var(--cream-body);
   overflow: hidden;
 }
 
@@ -436,7 +436,7 @@ h3,
 .reviews {
   padding: 104px 0 116px;
   overflow: hidden;
-  background: var(--cream-review);
+  background: var(--cream-body);
   color: var(--burgundy-deep);
 }
 
@@ -592,7 +592,7 @@ h3,
 
 .download-cta {
   padding: clamp(64px, 8vw, 96px) 0 72px;
-  background: var(--cream-review);
+  background: var(--cream-body);
   overflow: hidden;
 }
 
@@ -694,7 +694,7 @@ h3,
 
 .site-footer {
   padding: 0 0 40px;
-  background: var(--cream-review);
+  background: var(--cream-body);
   color: var(--burgundy-deep);
 }
 
