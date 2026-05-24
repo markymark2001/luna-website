@@ -574,7 +574,7 @@ h3,
   grid-row: 3;
   max-width: 420px;
   color: var(--burgundy-soft);
-  font-size: 17px;
+  font-size: var(--body);
   font-weight: 400;
   line-height: 1.4;
   text-wrap: pretty;
