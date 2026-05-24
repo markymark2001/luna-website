@@ -21,20 +21,28 @@
       </div>
     </header>
 
-    <main>
-      <section class="video-hero" aria-labelledby="video-hero-title">
-        <video class="video-hero__media" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-          <source src="assets/homepage-background.mp4" type="video/mp4">
-        </video>
-        <div class="video-hero__overlay" aria-hidden="true"></div>
+    <section class="video-hero" aria-labelledby="video-hero-title">
+      <video class="video-hero__media" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/homepage-background.mp4" type="video/mp4">
+      </video>
+      <div class="video-hero__overlay" aria-hidden="true"></div>
 
-        <div class="wrap video-hero__content">
-          <h1 id="video-hero-title" class="hero-logo">Luna</h1>
-          <p class="hero-subtitle">Personal astrology for clearer days.</p>
-          <a class="button primary hero-button" href="#get-the-app" aria-label="Get the Luna app">
-            <span>Get the app</span>
-            <span aria-hidden="true">Get the app</span>
-          </a>
+      <div class="wrap video-hero__content">
+        <h1 id="video-hero-title" class="hero-logo">Luna</h1>
+        <p class="hero-subtitle">Personal astrology for clearer days.</p>
+        <a class="button primary hero-button" href="#get-the-app" aria-label="Get the Luna app">
+          <span>Get the app</span>
+          <span aria-hidden="true">Get the app</span>
+        </a>
+      </div>
+    </section>
+
+    <main>
+      <section class="reviews-preview" id="reviews" aria-labelledby="reviews-title">
+        <div class="wrap reviews-preview__inner">
+          <p class="reviews-preview__eyebrow">Loved by early users</p>
+          <h2 id="reviews-title">Guidance that feels personal.</h2>
+          <p>Real review quotes will live here once we choose the final review set.</p>
         </div>
       </section>
 
@@ -55,5 +63,14 @@
         </div>
       </section>
     </main>
+    <script>
+      const header = document.querySelector(".site-header");
+      const syncHeader = () => {
+        header.classList.toggle("is-visible", window.scrollY > 24);
+      };
+
+      syncHeader();
+      window.addEventListener("scroll", syncHeader, { passive: true });
+    </script>
   </body>
 </html>
