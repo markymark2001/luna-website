@@ -30,13 +30,13 @@
       <div class="video-hero__overlay" aria-hidden="true"></div>
 
       <div class="wrap video-hero__content">
-        <div class="video-hero__center">
+        <div class="video-hero__top">
           <h1 id="video-hero-title" class="hero-logo hero-logo--mark" aria-label="TAIA">
-            <span class="brand-logo brand-logo--hero" aria-hidden="true"></span>
+            <span class="brand-logo brand-logo--hero-top" aria-hidden="true"></span>
           </h1>
-          <p class="hero-subtitle">Personal astrology for clearer days.</p>
         </div>
         <div class="video-hero__bottom">
+          <p class="hero-subtitle">Personal astrology for clearer days.</p>
           <div class="hero-rating" aria-label="Rated 4.8 stars, with more than 12 thousand readings a week">
             <span class="hero-rating__stars" aria-hidden="true">★★★★★</span>
             <span>4.8</span>
@@ -81,8 +81,12 @@
     </main>
     <script>
       const header = document.querySelector(".site-header");
+      const heroLogo = document.querySelector(".video-hero__top");
       const syncHeader = () => {
-        header.classList.toggle("is-visible", window.scrollY > 24);
+        const logoHasScrolledOut = heroLogo
+          ? heroLogo.getBoundingClientRect().bottom <= 0
+          : window.scrollY > 24;
+        header.classList.toggle("is-visible", logoHasScrolledOut);
       };
 
       syncHeader();
