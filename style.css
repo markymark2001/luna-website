@@ -256,11 +256,34 @@ h3,
 }
 
 .video-hero__center {
+  position: relative;
   align-self: center;
   display: grid;
   grid-row: 2;
   justify-items: center;
   gap: 22px;
+}
+
+.video-hero__center::before {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  width: min(820px, 94vw);
+  aspect-ratio: 2.45 / 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(21, 2, 19, 0.9) 0%,
+      rgba(21, 2, 19, 0.76) 34%,
+      rgba(21, 2, 19, 0.42) 58%,
+      rgba(21, 2, 19, 0) 76%
+    );
+  content: "";
+  filter: blur(18px);
+  pointer-events: none;
+  transform: translate(-50%, -52%);
 }
 
 .video-hero__bottom {
