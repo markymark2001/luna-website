@@ -249,9 +249,12 @@ h3,
   text-align: center;
 }
 
-.video-hero__content .hero-logo {
+.video-hero__center {
   align-self: center;
+  display: grid;
   grid-row: 2;
+  justify-items: center;
+  gap: 22px;
 }
 
 .video-hero__bottom {
