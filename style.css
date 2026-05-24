@@ -625,13 +625,6 @@ h3,
   justify-items: start;
 }
 
-.download-cta__eyebrow {
-  margin-bottom: var(--space-4);
-  color: rgba(246, 236, 220, 0.62);
-  font-size: var(--small);
-  font-weight: 500;
-}
-
 .download-cta h2 {
   max-width: 700px;
   font-size: var(--h2);
@@ -639,7 +632,7 @@ h3,
   letter-spacing: var(--tracking-display);
 }
 
-.download-cta__copy > p:not(.download-cta__eyebrow) {
+.download-cta__copy > p {
   max-width: 500px;
   margin-top: var(--space-6);
   color: rgba(246, 236, 220, 0.72);
