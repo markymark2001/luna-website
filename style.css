@@ -588,7 +588,7 @@ h3,
 }
 
 .download-cta {
-  padding: 0 0 72px;
+  padding: clamp(64px, 8vw, 96px) 0 72px;
   background: var(--cream-review);
   overflow: hidden;
 }
@@ -991,7 +991,7 @@ body:not(.home-page) > footer a {
   }
 
   .download-cta {
-    padding: 0 0 56px;
+    padding: 56px 0;
   }
 
   .download-cta__inner {
