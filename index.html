@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=20260524-11">
   </head>
-  <body class="home-page">
+  <body id="top" class="home-page">
     <header class="site-header" aria-label="Site header">
       <div class="wrap header-inner">
         <a class="brand-mark" href="index.html" aria-label="TAIA home">
@@ -101,7 +101,7 @@
         </div>
       </section>
 
-      <section class="reviews" aria-labelledby="reviews-title">
+      <section class="reviews" id="reviews" aria-labelledby="reviews-title">
         <div class="wrap reviews-head">
           <h2 id="reviews-title">People come back for clarity.</h2>
           <p>Short reflections from people using Taia to ask better questions, notice patterns, and move through the week with more intention.</p>
@@ -298,6 +298,45 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer" aria-label="Footer">
+      <div class="wrap site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="index.html" aria-label="TAIA home">
+            <span class="brand-logo brand-logo--footer" aria-hidden="true"></span>
+          </a>
+          <p>Find answers and manifest your future.</p>
+          <a class="site-footer__email" href="mailto:mark@mediakey.io">mark@mediakey.io</a>
+        </div>
+
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <div class="site-footer__group">
+            <h2>Navigate</h2>
+            <a href="index.html">Home</a>
+            <a href="#get-the-app">Features</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#download">Download</a>
+          </div>
+          <div class="site-footer__group">
+            <h2>Company</h2>
+            <a href="about.html">About</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="site-footer__group">
+            <h2>Legal</h2>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
+        </nav>
+      </div>
+
+      <div class="wrap site-footer__bottom">
+        <p>&copy; 2026 TEAM DECA LTD. All rights reserved.</p>
+        <a href="#top" aria-label="Back to top">Back to top</a>
+      </div>
+    </footer>
+
     <script>
       document.querySelectorAll(".review-track").forEach((track) => {
         const groups = track.querySelectorAll(".review-group");
