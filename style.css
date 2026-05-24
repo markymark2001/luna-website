@@ -418,6 +418,93 @@ h3,
   width: min(320px, 76vw);
 }
 
+.reviews {
+  padding: 104px 0 116px;
+  overflow: hidden;
+  background: var(--app-surface-dark);
+  color: var(--cream-body);
+}
+
+.reviews-head {
+  display: grid;
+  gap: var(--space-5);
+  justify-items: center;
+  margin-bottom: var(--space-16);
+  text-align: center;
+}
+
+.reviews-head h2 {
+  max-width: 760px;
+  font-size: var(--h2);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+}
+
+.reviews-head p {
+  max-width: 660px;
+  color: rgba(252, 228, 210, 0.68);
+  font-size: var(--lead);
+  font-weight: 300;
+}
+
+.review-marquee {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.review-track {
+  display: flex;
+  width: max-content;
+  animation: review-slide 42s linear infinite;
+  will-change: transform;
+}
+
+.review-track--reverse {
+  animation-direction: reverse;
+}
+
+.review-group {
+  display: flex;
+  flex: 0 0 auto;
+  gap: var(--space-5);
+  padding-right: var(--space-5);
+}
+
+.review-card {
+  display: grid;
+  align-content: space-between;
+  width: min(380px, calc(100vw - 48px));
+  min-height: 150px;
+  padding: var(--space-6);
+  border: 1px solid rgba(252, 228, 210, 0.14);
+  border-radius: 8px;
+  background: rgba(252, 228, 210, 0.08);
+}
+
+.review-card p {
+  color: rgba(252, 228, 210, 0.86);
+  font-size: var(--body);
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.review-card span {
+  margin-top: var(--space-6);
+  color: var(--gold);
+  font-size: var(--small);
+  font-weight: 500;
+}
+
+@keyframes review-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 body:not(.home-page) {
   background: var(--cream-body);
 }
@@ -540,6 +627,21 @@ body:not(.home-page) > footer a {
   .button > span + span {
     display: none;
   }
+
+  .review-track {
+    width: auto;
+    animation: none;
+  }
+
+  .review-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .review-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 720px) {
@@ -598,6 +700,14 @@ body:not(.home-page) > footer a {
   .feature-copy {
     justify-items: center;
     text-align: center;
+  }
+
+  .reviews {
+    padding: 80px 0 92px;
+  }
+
+  .reviews-head {
+    margin-bottom: var(--space-10);
   }
 
   .device-frame--iphone {
