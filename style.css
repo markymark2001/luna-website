@@ -40,6 +40,7 @@
   --duration-base: 240ms;
 
   --container: 1120px;
+  --content-container: 980px;
   --display: clamp(72px, 12vw, 132px);
   --h1: clamp(52px, 7vw, 90px);
   --h2: clamp(40px, 5vw, 70px);
@@ -96,6 +97,12 @@ h3,
 .wrap {
   width: min(var(--container), calc(100% - 64px));
   margin: 0 auto;
+}
+
+.home-page main .wrap,
+.home-page .download-cta > .wrap,
+.home-page .site-footer > .wrap {
+  width: min(var(--content-container), calc(100% - 64px));
 }
 
 .button {
@@ -969,6 +976,12 @@ body:not(.home-page):not(.legal-page) > footer a {
 @media (max-width: 720px) {
   .wrap {
     width: min(var(--container), calc(100% - 32px));
+  }
+
+  .home-page main .wrap,
+  .home-page .download-cta > .wrap,
+  .home-page .site-footer > .wrap {
+    width: min(var(--content-container), calc(100% - 32px));
   }
 
   .header-inner {
