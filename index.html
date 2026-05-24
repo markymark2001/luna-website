@@ -81,12 +81,12 @@
     </main>
     <script>
       const header = document.querySelector(".site-header");
-      const heroLogo = document.querySelector(".video-hero__top");
+      const heroCta = document.querySelector(".video-hero__bottom .button");
       const syncHeader = () => {
-        const logoHasScrolledOut = heroLogo
-          ? heroLogo.getBoundingClientRect().bottom <= 0
+        const ctaHasScrolledOut = heroCta
+          ? heroCta.getBoundingClientRect().bottom <= 0
           : window.scrollY > 24;
-        header.classList.toggle("is-visible", logoHasScrolledOut);
+        header.classList.toggle("is-visible", ctaHasScrolledOut);
       };
 
       syncHeader();
