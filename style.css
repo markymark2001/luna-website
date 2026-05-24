@@ -34,6 +34,7 @@
   --display: clamp(72px, 12vw, 132px);
   --h1: clamp(52px, 7vw, 90px);
   --h2: clamp(40px, 5vw, 70px);
+  --tracking-display: -0.05em;
   --lead: clamp(17px, 2vw, 20px);
   --body: 16px;
   --small: 14px;
@@ -185,6 +186,7 @@ h3,
 .hero-logo {
   font-size: var(--display);
   font-weight: 400;
+  letter-spacing: var(--tracking-display);
   line-height: 1;
 }
 

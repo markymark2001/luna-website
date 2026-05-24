@@ -56,6 +56,7 @@
         --h1: clamp(52px, 7vw, 90px);
         --h2: clamp(42px, 5vw, 70px);
         --h3: clamp(28px, 3vw, 48px);
+        --tracking-display: -0.05em;
         --lead: clamp(17px, 2vw, 20px);
         --body: 16px;
         --small: 14px;
@@ -246,6 +247,7 @@
         max-width: 900px;
         font-size: var(--h1);
         line-height: 0.98;
+        letter-spacing: var(--tracking-display);
         text-wrap: balance;
       }
 
@@ -357,6 +359,7 @@
         font-family: var(--font-sans);
         font-size: var(--display);
         line-height: 0.86;
+        letter-spacing: var(--tracking-display);
       }
 
       .bar {
@@ -588,8 +591,8 @@
             </p>
           </div>
           <div class="type-flow">
-            <div class="type-item"><div class="label">Display</div><div class="display-sample">Luna</div><code>Poppins / 118 max</code></div>
-            <div class="type-item"><div class="label">Hero</div><div class="serif" style="font-size: var(--h1); line-height: 0.98;">Personal clarity.</div><code>Poppins / 90 max</code></div>
+            <div class="type-item"><div class="label">Display</div><div class="display-sample">Luna</div><code>Poppins / -5%</code></div>
+            <div class="type-item"><div class="label">Hero</div><div class="serif" style="font-size: var(--h1); line-height: 0.98; letter-spacing: var(--tracking-display);">Personal clarity.</div><code>Poppins / -5%</code></div>
             <div class="type-item"><div class="label">Section</div><div class="serif" style="font-size: var(--h2); line-height: 1;">Daily guidance</div><code>Poppins / 70 max</code></div>
             <div class="type-item"><div class="label">Lead</div><div class="lead">Support copy should feel soft, readable, and restrained.</div><code>Poppins / 18-20</code></div>
             <div class="type-item"><div class="label">Body</div><div>Longer product, legal, support, and explanatory copy.</div><code>Poppins / 16</code></div>
