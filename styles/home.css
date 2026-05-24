@@ -362,10 +362,10 @@
   grid-column: 1;
   grid-row: 1;
   color: var(--burgundy-deep);
-  font-size: 21px;
+  font-size: var(--body);
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.4;
+  letter-spacing: 0;
 }
 
 .review-card p {
@@ -381,8 +381,16 @@
 .review-card p {
   color: var(--muted);
   font-size: var(--body);
-  font-weight: 300;
   line-height: 1.4;
+}
+
+.review-person::before,
+.review-person small {
+  font-weight: 400;
+}
+
+.review-card p {
+  font-weight: 300;
 }
 
 .review-person small {
