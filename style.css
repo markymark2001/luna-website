@@ -2,13 +2,13 @@
   --font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --cream-header: #f0e6d6;
-  --cream-body: #fce4d2;
-  --cream-section: #efd5c0;
+  --cream-body: #f6ecdc;
+  --cream-section: #f0e6d6;
   --cream-review: #f6ecdc;
   --cream-review-card: #fbf4e6;
-  --cream-action: #efd5c0;
-  --cream-action-hover: #e8c8ad;
-  --cream-action-border: #8a6f63;
+  --cream-action: #f0e6d6;
+  --cream-action-hover: #e9decd;
+  --cream-action-border: #b7a893;
   --white: #ffffff;
   --ink: #1a0210;
   --app-surface-dark: #150213;
@@ -606,7 +606,7 @@ h3,
   padding: clamp(56px, 8vw, 96px) clamp(36px, 6vw, 72px);
   overflow: hidden;
   border-radius: clamp(28px, 4vw, 44px);
-  background: #230512;
+  background: var(--burgundy-deep);
   color: var(--cream-review);
 }
 
