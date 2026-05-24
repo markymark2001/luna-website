@@ -358,7 +358,7 @@ h3,
 
 .feature-copy h2 {
   max-width: 620px;
-  font-size: var(--h2);
+  font-size: clamp(34px, 4vw, 56px);
   line-height: 1;
   letter-spacing: var(--tracking-display);
 }
@@ -366,7 +366,7 @@ h3,
 .feature-copy p {
   max-width: 520px;
   color: var(--muted);
-  font-size: var(--lead);
+  font-size: var(--body);
   font-weight: 300;
   text-wrap: balance;
 }
