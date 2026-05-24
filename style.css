@@ -684,10 +684,12 @@ h3,
 }
 
 .download-cta__device {
-  position: relative;
-  z-index: 1;
-  justify-self: center;
-  width: min(300px, 72vw);
+  position: absolute;
+  right: clamp(-96px, -5vw, -32px);
+  bottom: 0;
+  z-index: 0;
+  width: min(520px, 44vw);
+  transform: translateY(46%);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.08) inset,
     0 38px 86px -18px rgba(0, 0, 0, 0.48);
@@ -1001,7 +1003,8 @@ body:not(.home-page) > footer a {
   .download-cta__inner {
     grid-template-columns: 1fr;
     justify-items: center;
-    min-height: 0;
+    align-items: start;
+    min-height: 640px;
     padding: 44px 24px;
     text-align: center;
   }
@@ -1017,7 +1020,9 @@ body:not(.home-page) > footer a {
 
   .download-cta__device {
     order: -1;
-    width: min(280px, 78vw);
+    right: 50%;
+    width: min(430px, 112vw);
+    transform: translate(50%, 62%);
   }
 
   .site-footer {
