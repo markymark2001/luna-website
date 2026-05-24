@@ -178,9 +178,26 @@ h3,
 }
 
 .brand-mark {
-  font-size: 34px;
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
   text-decoration: none;
+}
+
+.brand-logo {
+  display: block;
+  aspect-ratio: 688 / 212;
+  background: currentColor;
+  mask: url("assets/taia-logo.svg") center / contain no-repeat;
+  -webkit-mask: url("assets/taia-logo.svg") center / contain no-repeat;
+}
+
+.brand-logo--header {
+  width: 104px;
+}
+
+.brand-logo--hero {
+  width: min(520px, 72vw);
 }
 
 .video-hero {
@@ -299,6 +316,12 @@ h3,
   font-weight: 400;
   letter-spacing: var(--tracking-display);
   line-height: 1;
+}
+
+.hero-logo--mark {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .hero-subtitle {
@@ -483,7 +506,15 @@ body:not(.home-page) > footer a {
   }
 
   .brand-mark {
-    font-size: 30px;
+    color: var(--ink);
+  }
+
+  .brand-logo--header {
+    width: 92px;
+  }
+
+  .brand-logo--hero {
+    width: min(340px, 74vw);
   }
 
   .video-hero__content {
