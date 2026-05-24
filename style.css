@@ -586,6 +586,120 @@ h3,
   }
 }
 
+.download-cta {
+  padding: 0 0 112px;
+  background: var(--cream-review);
+  overflow: hidden;
+}
+
+.download-cta__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.72fr);
+  align-items: center;
+  gap: clamp(40px, 7vw, 88px);
+  min-height: 520px;
+  padding: clamp(56px, 8vw, 88px);
+  overflow: hidden;
+  border-radius: 28px;
+  background: var(--burgundy-deep);
+  color: var(--cream-review);
+}
+
+.download-cta__inner::before {
+  position: absolute;
+  right: -220px;
+  top: -240px;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(228, 173, 85, 0.24), rgba(228, 173, 85, 0) 62%);
+  content: "";
+  pointer-events: none;
+}
+
+.download-cta__copy {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: start;
+}
+
+.download-cta__eyebrow {
+  margin-bottom: var(--space-4);
+  color: rgba(246, 236, 220, 0.62);
+  font-size: var(--small);
+  font-weight: 500;
+}
+
+.download-cta h2 {
+  max-width: 700px;
+  font-size: var(--h2);
+  line-height: 0.98;
+  letter-spacing: var(--tracking-display);
+}
+
+.download-cta__copy > p:not(.download-cta__eyebrow) {
+  max-width: 500px;
+  margin-top: var(--space-6);
+  color: rgba(246, 236, 220, 0.72);
+  font-size: var(--lead);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.download-cta__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.download-cta .button.primary {
+  background: var(--cream-review);
+  color: var(--burgundy-deep);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.48) inset,
+    0 16px 36px rgba(0, 0, 0, 0.24);
+}
+
+.download-cta .button.primary:hover {
+  background: var(--cream-review-card);
+}
+
+.download-cta__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(246, 236, 220, 0.62);
+  font-size: var(--small);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.download-cta__meta span:first-child {
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+.download-cta__meta i {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(246, 236, 220, 0.45);
+}
+
+.download-cta__device {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  width: min(300px, 72vw);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 38px 86px -18px rgba(0, 0, 0, 0.48);
+}
+
 body:not(.home-page) {
   background: var(--cream-body);
 }
@@ -789,6 +903,32 @@ body:not(.home-page) > footer a {
 
   .reviews-head {
     margin-bottom: var(--space-10);
+  }
+
+  .download-cta {
+    padding: 0 0 84px;
+  }
+
+  .download-cta__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: 0;
+    padding: 44px 24px;
+    text-align: center;
+  }
+
+  .download-cta__copy {
+    justify-items: center;
+  }
+
+  .download-cta__actions,
+  .download-cta__meta {
+    justify-content: center;
+  }
+
+  .download-cta__device {
+    order: -1;
+    width: min(280px, 78vw);
   }
 
   .device-frame--iphone {
