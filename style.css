@@ -224,7 +224,7 @@ h3,
   width: 100%;
   min-height: 100vh;
   padding: 80px 0 72px;
-  color: var(--white);
+  color: var(--cream-body);
   text-align: center;
 }
 
@@ -242,11 +242,11 @@ h3,
 }
 
 .video-hero .hero-subtitle {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(252, 228, 210, 0.82);
 }
 
 .video-hero .button.primary {
-  background: var(--white);
+  background: var(--cream-body);
   color: var(--brown-action);
 }
 
