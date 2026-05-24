@@ -201,6 +201,13 @@ h3,
   width: min(520px, 72vw);
 }
 
+.video-hero .brand-logo--hero {
+  filter:
+    drop-shadow(0 1px 3px rgba(21, 2, 19, 0.95))
+    drop-shadow(0 4px 8px rgba(21, 2, 19, 0.82))
+    drop-shadow(0 12px 24px rgba(21, 2, 19, 0.68));
+}
+
 .video-hero {
   position: relative;
   display: grid;
