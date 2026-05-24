@@ -485,14 +485,16 @@ h3,
 }
 
 .review-card {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  width: min(392px, calc(100vw - 48px));
-  min-height: 190px;
-  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto 1fr;
+  column-gap: var(--space-6);
+  row-gap: var(--space-4);
+  width: min(560px, calc(100vw - 48px));
+  min-height: 230px;
+  padding: 30px 34px;
   border: 1px solid var(--burgundy-line);
-  border-radius: 8px;
+  border-radius: 28px;
   background: var(--cream-review-card);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.72) inset,
@@ -500,73 +502,77 @@ h3,
 }
 
 .review-card__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
+  display: contents;
 }
 
 .review-person {
-  display: inline-flex;
-  align-items: center;
-  min-width: 0;
-  gap: var(--space-3);
+  display: grid;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  justify-items: end;
+  align-self: start;
+  min-width: 136px;
+  color: var(--burgundy-mute);
+  text-align: right;
 }
 
 .review-person span:last-child {
   display: grid;
-  gap: 2px;
+  gap: 4px;
   min-width: 0;
 }
 
 .review-avatar {
-  display: grid;
-  flex: 0 0 36px;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--burgundy), var(--burgundy-deep));
-  color: var(--cream-review-card);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  display: none;
+}
+
+.review-person::before {
+  color: var(--burgundy-mute);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
+  content: "9 May";
 }
 
 .review-person b {
-  color: var(--burgundy-deep);
-  font-size: var(--small);
-  font-weight: 600;
-  line-height: 1.1;
+  display: none;
 }
 
 .review-person small {
   color: var(--burgundy-mute);
-  font-size: 12px;
-  line-height: 1.1;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
 }
 
 .review-stars {
-  flex: 0 0 auto;
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: start;
   color: #c8923a;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  font-size: 20px;
+  letter-spacing: 0.02em;
   line-height: 1;
 }
 
 .review-card h3 {
+  grid-column: 1;
+  grid-row: 1;
   color: var(--burgundy-deep);
-  font-size: 19px;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -0.025em;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 .review-card p {
+  grid-column: 1 / -1;
+  grid-row: 3;
+  max-width: 420px;
   color: var(--burgundy-soft);
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.4;
   text-wrap: pretty;
 }
 
