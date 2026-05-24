@@ -532,7 +532,7 @@ h3,
 
 .review-person::before {
   color: var(--burgundy-mute);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.15;
   content: "9 May";
@@ -544,7 +544,7 @@ h3,
 
 .review-person small {
   color: var(--burgundy-mute);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.15;
 }
@@ -554,7 +554,7 @@ h3,
   grid-row: 2;
   justify-self: start;
   color: #c8923a;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1;
 }
@@ -563,7 +563,7 @@ h3,
   grid-column: 1;
   grid-row: 1;
   color: var(--burgundy-deep);
-  font-size: 24px;
+  font-size: 21px;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -574,7 +574,7 @@ h3,
   grid-row: 3;
   max-width: 420px;
   color: var(--burgundy-soft);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 400;
   line-height: 1.4;
   text-wrap: pretty;
