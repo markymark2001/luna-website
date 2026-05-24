@@ -675,9 +675,9 @@ h3,
 
 
 .site-footer {
-  padding: 18px 0 28px;
-  background: #230512;
-  color: var(--cream-review);
+  padding: 80px 0 40px;
+  background: var(--cream-review);
+  color: var(--burgundy-deep);
 }
 
 .site-footer__inner {
@@ -685,6 +685,7 @@ h3,
   grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.35fr);
   gap: clamp(48px, 8vw, 112px);
   padding-top: var(--space-12);
+  border-top: 1px solid var(--burgundy-line);
 }
 
 .site-footer__brand {
@@ -696,7 +697,7 @@ h3,
 
 .site-footer__logo {
   display: inline-flex;
-  color: var(--cream-review);
+  color: var(--burgundy-deep);
   text-decoration: none;
 }
 
@@ -706,14 +707,14 @@ h3,
 
 .site-footer__brand p {
   max-width: 360px;
-  color: rgba(246, 236, 220, 0.74);
+  color: var(--burgundy-soft);
   font-size: var(--lead);
   font-weight: 300;
   line-height: 1.45;
 }
 
 .site-footer__email {
-  color: var(--cream-review);
+  color: var(--burgundy-deep);
   font-size: var(--small);
   font-weight: 500;
   text-decoration: none;
@@ -722,7 +723,7 @@ h3,
 .site-footer__email:hover,
 .site-footer__group a:hover,
 .site-footer__bottom a:hover {
-  color: var(--brown-action);
+  color: var(--burgundy-deep);
 }
 
 .site-footer__nav {
@@ -739,14 +740,14 @@ h3,
 
 .site-footer__group h2 {
   margin-bottom: var(--space-2);
-  color: var(--cream-review);
+  color: var(--burgundy-mute);
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
 }
 
 .site-footer__group a {
-  color: rgba(246, 236, 220, 0.62);
+  color: var(--burgundy-soft);
   font-size: var(--small);
   font-weight: 400;
   line-height: 1.2;
@@ -761,12 +762,13 @@ h3,
   gap: var(--space-5);
   margin-top: var(--space-16);
   padding-top: var(--space-6);
-  color: rgba(246, 236, 220, 0.54);
+  border-top: 1px solid var(--burgundy-line);
+  color: var(--burgundy-mute);
   font-size: 13px;
 }
 
 .site-footer__bottom a {
-  color: rgba(246, 236, 220, 0.62);
+  color: var(--burgundy-soft);
   font-weight: 500;
   text-decoration: none;
   transition: color var(--duration-base) var(--ease-out);
