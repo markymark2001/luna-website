@@ -589,7 +589,7 @@ h3,
 
 .download-cta {
   padding: 0;
-  background: var(--burgundy-deep);
+  background: #230512;
   overflow: hidden;
 }
 
@@ -695,7 +695,7 @@ h3,
 
 .site-footer {
   padding: 18px 0 28px;
-  background: var(--burgundy-deep);
+  background: #230512;
   color: var(--cream-review);
 }
 
@@ -723,7 +723,7 @@ h3,
 
 .site-footer__brand p {
   max-width: 360px;
-  color: rgba(246, 236, 220, 0.68);
+  color: rgba(246, 236, 220, 0.74);
   font-size: var(--lead);
   font-weight: 300;
   line-height: 1.45;
@@ -763,7 +763,7 @@ h3,
 }
 
 .site-footer__group a {
-  color: rgba(246, 236, 220, 0.56);
+  color: rgba(246, 236, 220, 0.62);
   font-size: var(--small);
   font-weight: 400;
   line-height: 1.2;
@@ -778,12 +778,12 @@ h3,
   gap: var(--space-5);
   margin-top: var(--space-16);
   padding-top: var(--space-6);
-  color: rgba(246, 236, 220, 0.48);
+  color: rgba(246, 236, 220, 0.54);
   font-size: 13px;
 }
 
 .site-footer__bottom a {
-  color: rgba(246, 236, 220, 0.56);
+  color: rgba(246, 236, 220, 0.62);
   font-weight: 500;
   text-decoration: none;
   transition: color var(--duration-base) var(--ease-out);
