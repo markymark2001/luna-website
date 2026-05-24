@@ -312,9 +312,8 @@ h3,
 
 .hero {
   min-height: calc(100vh - 84px);
-  margin-top: -1px;
   padding: 72px 0 88px;
-  background: var(--app-surface-dark);
+  background: var(--cream-header);
   overflow: hidden;
 }
 
