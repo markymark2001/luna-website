@@ -258,6 +258,31 @@ h3,
   color: rgba(252, 228, 210, 0.82);
 }
 
+.hero-rating {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(252, 228, 210, 0.86);
+  font-size: var(--small);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-rating__stars {
+  color: var(--cream-body);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+}
+
+.hero-rating__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(252, 228, 210, 0.72);
+}
+
 .video-hero .button.primary {
   background: var(--cream-body);
   color: var(--brown-action);
@@ -519,6 +544,12 @@ body:not(.home-page) > footer a {
 
   .video-hero__content {
     padding: 64px 0 56px;
+  }
+
+  .hero-rating {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    white-space: normal;
   }
 
   .hero {
