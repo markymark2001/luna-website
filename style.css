@@ -619,9 +619,9 @@ h3,
 }
 
 .download-cta h2 {
-  max-width: 700px;
-  font-size: var(--h2);
-  line-height: 0.98;
+  max-width: 460px;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.02;
   letter-spacing: var(--tracking-display);
 }
 
@@ -629,7 +629,7 @@ h3,
   max-width: 500px;
   margin-top: var(--space-6);
   color: rgba(246, 236, 220, 0.72);
-  font-size: var(--lead);
+  font-size: var(--body);
   font-weight: 300;
   line-height: 1.5;
 }
