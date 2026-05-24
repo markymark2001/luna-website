@@ -863,7 +863,7 @@ body:not(.home-page):not(.legal-page) > footer a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--cream-review);
+  background: var(--cream-body);
   color: var(--burgundy-deep);
 }
 
