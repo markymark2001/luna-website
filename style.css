@@ -588,8 +588,8 @@ h3,
 }
 
 .download-cta {
-  padding: 0 0 112px;
-  background: var(--cream-review);
+  padding: 0;
+  background: var(--burgundy-deep);
   overflow: hidden;
 }
 
@@ -602,8 +602,7 @@ h3,
   min-height: 520px;
   padding: clamp(56px, 8vw, 88px);
   overflow: hidden;
-  border-radius: 28px;
-  background: var(--burgundy-deep);
+  background: transparent;
   color: var(--cream-review);
 }
 
@@ -695,17 +694,16 @@ h3,
 }
 
 .site-footer {
-  padding: 86px 0 28px;
-  background: var(--cream-review);
-  color: var(--burgundy-deep);
+  padding: 18px 0 28px;
+  background: var(--burgundy-deep);
+  color: var(--cream-review);
 }
 
 .site-footer__inner {
   display: grid;
   grid-template-columns: minmax(260px, 0.95fr) minmax(0, 1.35fr);
   gap: clamp(48px, 8vw, 112px);
-  padding-top: var(--space-16);
-  border-top: 1px solid var(--burgundy-line);
+  padding-top: var(--space-12);
 }
 
 .site-footer__brand {
@@ -715,26 +713,24 @@ h3,
   gap: var(--space-5);
 }
 
-.site-footer__logo {
-  display: inline-flex;
-  color: var(--burgundy-deep);
-  text-decoration: none;
-}
-
-.brand-logo--footer {
-  width: clamp(132px, 16vw, 184px);
+.site-footer__brand h2 {
+  color: var(--cream-review);
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: var(--tracking-display);
 }
 
 .site-footer__brand p {
   max-width: 360px;
-  color: var(--burgundy-soft);
+  color: rgba(246, 236, 220, 0.68);
   font-size: var(--lead);
   font-weight: 300;
   line-height: 1.45;
 }
 
 .site-footer__email {
-  color: var(--burgundy-deep);
+  color: var(--cream-review);
   font-size: var(--small);
   font-weight: 500;
   text-decoration: none;
@@ -760,14 +756,14 @@ h3,
 
 .site-footer__group h2 {
   margin-bottom: var(--space-2);
-  color: var(--burgundy-deep);
+  color: var(--cream-review);
   font-size: 13px;
   font-weight: 600;
   line-height: 1;
 }
 
 .site-footer__group a {
-  color: var(--burgundy-mute);
+  color: rgba(246, 236, 220, 0.56);
   font-size: var(--small);
   font-weight: 400;
   line-height: 1.2;
@@ -782,13 +778,12 @@ h3,
   gap: var(--space-5);
   margin-top: var(--space-16);
   padding-top: var(--space-6);
-  border-top: 1px solid var(--burgundy-line);
-  color: var(--burgundy-mute);
+  color: rgba(246, 236, 220, 0.48);
   font-size: 13px;
 }
 
 .site-footer__bottom a {
-  color: var(--burgundy-mute);
+  color: rgba(246, 236, 220, 0.56);
   font-weight: 500;
   text-decoration: none;
   transition: color var(--duration-base) var(--ease-out);
@@ -1000,7 +995,7 @@ body:not(.home-page) > footer a {
   }
 
   .download-cta {
-    padding: 0 0 84px;
+    padding: 0;
   }
 
   .download-cta__inner {
@@ -1026,7 +1021,7 @@ body:not(.home-page) > footer a {
   }
 
   .site-footer {
-    padding: 64px 0 24px;
+    padding: 10px 0 24px;
   }
 
   .site-footer__inner {
