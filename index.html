@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260524-7">
+    <link rel="stylesheet" href="style.css?v=20260524-8">
   </head>
   <body class="home-page">
     <header class="site-header" aria-label="Site header">
@@ -272,6 +272,19 @@
         </div>
       </section>
     </main>
+    <script>
+      document.querySelectorAll(".review-track").forEach((track) => {
+        const groups = track.querySelectorAll(".review-group");
+        const template = groups[1] || groups[0];
+        if (!template) return;
+
+        while (track.querySelectorAll(".review-group").length < 4) {
+          const clone = template.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          track.appendChild(clone);
+        }
+      });
+    </script>
     <script>
       const header = document.querySelector(".site-header");
       const heroCta = document.querySelector(".video-hero__bottom .button");

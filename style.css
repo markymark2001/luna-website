@@ -468,7 +468,6 @@ h3,
 
 .review-track {
   display: flex;
-  gap: var(--review-gap);
   width: max-content;
   animation: review-slide 42s linear infinite;
   will-change: transform;
@@ -482,6 +481,7 @@ h3,
   display: flex;
   flex: 0 0 auto;
   gap: var(--review-gap);
+  padding-right: var(--review-gap);
 }
 
 .review-card {
@@ -576,7 +576,7 @@ h3,
   }
 
   to {
-    transform: translateX(calc(-50% - (var(--review-gap) / 2)));
+    transform: translateX(-25%);
   }
 }
 
