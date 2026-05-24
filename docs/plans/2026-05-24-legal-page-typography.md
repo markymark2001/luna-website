@@ -19,6 +19,6 @@
 - [ ] Reduce legal page width to a readable long-form measure.
 - [ ] Make legal H1 use a page-heading scale instead of landing-page display scale.
 - [ ] Make legal H2/H3 use smaller section-heading styles with normal letter spacing.
-- [ ] Make legal body, list, link, and strong colors align with `--ink`, `--muted`, and `--brown-action`.
+- [ ] Make legal body and strong text use primary `--ink`; keep `--brown-action` for links and reserve `--muted` for non-primary supporting UI.
 - [ ] Browser-check `privacy.html` and `terms.html` on desktop and mobile.
 - [ ] Verify no console errors and no horizontal overflow.

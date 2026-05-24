@@ -126,7 +126,7 @@
 
 .legal-copy p,
 .legal-copy li {
-  color: var(--muted);
+  color: var(--ink);
   font-size: var(--body);
   font-weight: 300;
   line-height: 1.65;
