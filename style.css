@@ -736,6 +736,7 @@ h3,
   gap: var(--space-5);
   margin-top: var(--space-16);
   padding-top: var(--space-6);
+  border-top: 1px solid var(--burgundy-line);
   color: var(--burgundy-soft);
   font-size: 13px;
 }
