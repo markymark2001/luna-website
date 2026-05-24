@@ -168,11 +168,8 @@ h3,
   left: 0;
   right: 0;
   z-index: 10;
-  background: rgba(246, 236, 220, 0.78);
-  border-bottom: 1px solid rgba(90, 22, 38, 0.14);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
-  box-shadow: none;
+  background: var(--cream-header);
+  box-shadow: 0 1px 0 rgba(43, 24, 10, 0.08);
   opacity: 0;
   pointer-events: none;
   transition: opacity 420ms var(--ease-out);
