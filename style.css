@@ -536,10 +536,12 @@ h3,
 }
 
 .review-person small {
+  align-self: center;
   grid-row: 2;
 }
 
 .review-stars {
+  align-self: center;
   grid-column: 1;
   grid-row: 2;
   justify-self: start;
@@ -574,6 +576,10 @@ h3,
   font-size: var(--body);
   font-weight: 300;
   line-height: 1.4;
+}
+
+.review-person small {
+  line-height: 1;
 }
 
 
