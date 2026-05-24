@@ -16,7 +16,7 @@
         <a class="brand-mark" href="index.html" aria-label="TAIA home">
           <span class="brand-logo brand-logo--header" aria-hidden="true"></span>
         </a>
-        <a class="button primary" href="#get-the-app">
+        <a class="button primary" href="index.html#get-the-app">
           <span>Download app <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
           <span aria-hidden="true">Download app <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
         </a>
@@ -25,7 +25,7 @@
 
     <section class="video-hero" aria-labelledby="video-hero-title">
       <video class="video-hero__media" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
-        <source src="assets/homepage-background.mp4" type="video/mp4">
+        <source src="https://website.lunaapp.io/homepage-background.mp4" type="video/mp4">
       </video>
       <div class="video-hero__overlay" aria-hidden="true"></div>
 
@@ -46,6 +46,11 @@
           <a class="button primary hero-button" href="#get-the-app" aria-label="Get started">
             <span>Get started <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
             <span aria-hidden="true">Get started <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
+          </a>
+          <a class="hero-scroll-cue" href="#get-the-app" aria-label="Scroll to the next section">
+            <svg viewBox="0 0 256 256" aria-hidden="true">
+              <path d="M213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 0 0 1 11.32-11.32L128 164.69l74.34-74.35a8 8 0 0 1 11.32 11.32z"/>
+            </svg>
           </a>
         </div>
       </div>
@@ -101,11 +106,7 @@
         </div>
       </section>
 
-      <section class="reviews" id="reviews" aria-labelledby="reviews-title">
-        <div class="wrap reviews-head">
-          <h2 id="reviews-title">People come back for clarity.</h2>
-          <p>Short reflections from people using Taia to ask better questions, notice patterns, and move through the week with more intention.</p>
-        </div>
+      <section class="reviews" id="reviews" aria-label="User reviews">
         <div class="review-marquee" aria-label="User reviews">
           <div class="review-track">
             <div class="review-group">
@@ -275,32 +276,32 @@
     </main>
 
     <footer class="site-footer" aria-label="Footer">
-      <section class="download-cta" id="download" aria-labelledby="download-title">
-        <div class="wrap download-cta__inner">
-          <div class="download-cta__copy">
-            <h2 id="download-title">Find your next answer with Taia.</h2>
-            <div class="download-cta__actions">
-              <div class="download-cta__meta" aria-label="Rated 4.8 stars, with more than 12 thousand readings a week">
-                <span aria-hidden="true">★★★★★</span>
-                <span>4.8</span>
-                <i aria-hidden="true"></i>
-                <span>12k+ readings a week</span>
-              </div>
-              <a class="button primary download-cta__button" href="index.html#get-the-app" aria-label="Download app">
-                <span>Download app <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
-                <span aria-hidden="true">Download app <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
-              </a>
+    <section class="download-cta" id="download" aria-labelledby="download-title">
+      <div class="wrap download-cta__inner">
+        <div class="download-cta__copy">
+          <h2 id="download-title">Find your next answer with Taia.</h2>
+          <div class="download-cta__actions">
+            <div class="download-cta__meta" aria-label="Rated 4.8 stars, with more than 12 thousand readings a week">
+              <span aria-hidden="true">★★★★★</span>
+              <span>4.8</span>
+              <i aria-hidden="true"></i>
+              <span>12k+ readings a week</span>
             </div>
-          </div>
-          <div class="download-cta__preview" aria-hidden="true">
-            <figure class="device-frame device-frame--iphone download-cta__device">
-              <div class="device-frame__screen">
-                <img src="assets/hero-app-screenshot.png" alt="">
-              </div>
-            </figure>
+            <a class="button primary download-cta__button" href="index.html#get-the-app" aria-label="Download app">
+              <span>Download app <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
+              <span aria-hidden="true">Download app <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
+            </a>
           </div>
         </div>
-      </section>
+        <div class="download-cta__preview" aria-hidden="true">
+          <figure class="device-frame device-frame--iphone download-cta__device">
+            <div class="device-frame__screen">
+              <img src="assets/hero-app-screenshot.png" alt="">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
 
       <div class="wrap site-footer__inner">
         <nav class="site-footer__nav" aria-label="Footer navigation">
@@ -335,33 +336,6 @@
         <a href="#top" aria-label="Back to top">Back to top</a>
       </div>
     </footer>
-
-
-    <script>
-      document.querySelectorAll(".review-track").forEach((track) => {
-        const groups = track.querySelectorAll(".review-group");
-        const template = groups[1] || groups[0];
-        if (!template) return;
-
-        while (track.querySelectorAll(".review-group").length < 4) {
-          const clone = template.cloneNode(true);
-          clone.setAttribute("aria-hidden", "true");
-          track.appendChild(clone);
-        }
-      });
-    </script>
-    <script>
-      const header = document.querySelector(".site-header");
-      const heroCta = document.querySelector(".video-hero__bottom .button");
-      const syncHeader = () => {
-        const ctaHasScrolledOut = heroCta
-          ? heroCta.getBoundingClientRect().bottom <= 0
-          : window.scrollY > 24;
-        header.classList.toggle("is-visible", ctaHasScrolledOut);
-      };
-
-      syncHeader();
-      window.addEventListener("scroll", syncHeader, { passive: true });
-    </script>
+    <script src="scripts/home.js"></script>
   </body>
 </html>

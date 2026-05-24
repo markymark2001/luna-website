@@ -48,7 +48,7 @@ h3,
 }
 
 .home-page main .wrap,
-.home-page .download-cta > .wrap,
-.home-page .site-footer > .wrap {
+.download-cta > .wrap,
+.site-footer > .wrap {
   width: min(var(--content-container), calc(100% - 64px));
 }

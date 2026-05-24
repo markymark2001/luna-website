@@ -168,8 +168,11 @@ Once your website is live, use these URLs in App Store Connect:
 To update the website content:
 
 ```bash
-# Make your edits to HTML/CSS files
-vim privacy.html  # or use your preferred editor
+# Make content edits in src/pages or shared shell edits in src/partials
+vim src/pages/privacy.html  # or use your preferred editor
+
+# Regenerate the root HTML files used by GitHub Pages
+node scripts/build-site.mjs
 
 # Commit changes
 git add .
@@ -232,7 +235,7 @@ Before submitting to App Store, verify:
 - [ ] HTTPS is enabled (green padlock in browser)
 - [ ] Links work on mobile devices (test in Safari on iPhone)
 - [ ] Contact email is correct and monitored: mark@mediakey.io
-- [ ] Company name is correct: TEAM DECA LTD
+- [ ] Company name is correct: MediaKey Solutions Inc.
 - [ ] Effective dates are current
 - [ ] Age restriction is 17+ (matches App Store rating)
 
@@ -256,4 +259,4 @@ For questions about this website setup, contact:
 
 ---
 
-**Created for TEAM DECA LTD - Luna App**
+**Created for MediaKey Solutions Inc. - Luna App**
