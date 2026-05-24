@@ -31,12 +31,6 @@ layout, styling, navigation, accessibility, public page rendering, GitHub Pages
 behavior, or user-reported website behavior. If selected, follow
 `docs/workflows/runtime-evidence.md`.
 
-Run `./.codex/scripts/codex-review.sh` after the full intended change set is committed,
-and before pushing; it uses `--output-last-message` so only the final review is printed.
-Review agents can take a while; if the process is alive, be patient and do not kill it just because it is quiet.
-Triage every finding; fix valid findings at the root cause instead of blindly applying the review text.
-Iterate until checks and review pass or remaining findings are explicit false positives.
-
 Push means commit and push every completed implementation.
 
 ## Workflows
