@@ -604,17 +604,6 @@ h3,
   text-align: center;
 }
 
-.download-cta__inner::before {
-  position: absolute;
-  right: -220px;
-  top: -240px;
-  width: 640px;
-  height: 640px;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(228, 173, 85, 0.24), rgba(228, 173, 85, 0) 62%);
-  content: "";
-  pointer-events: none;
-}
 
 .download-cta__copy {
   position: relative;
