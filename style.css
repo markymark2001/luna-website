@@ -201,17 +201,49 @@ h3,
   width: min(520px, 72vw);
 }
 
+.video-hero .hero-logo--mark {
+  position: relative;
+}
+
+.video-hero .hero-logo--mark::before,
+.video-hero .hero-logo--mark::after {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: min(560px, 76vw);
+  aspect-ratio: 688 / 212;
+  content: "";
+  mask: url("assets/taia-logo.svg") center / contain no-repeat;
+  -webkit-mask: url("assets/taia-logo.svg") center / contain no-repeat;
+  pointer-events: none;
+}
+
+.video-hero .hero-logo--mark::before {
+  z-index: 0;
+  top: 50%;
+  background: var(--app-surface-dark);
+  filter: blur(18px);
+  opacity: 0.96;
+  transform: translate(-50%, -44%) scale(1.16);
+}
+
+.video-hero .hero-logo--mark::after {
+  z-index: 1;
+  top: 50%;
+  background: var(--cream-body);
+  filter: blur(2px);
+  opacity: 0.42;
+  transform: translate(-50%, -51%) scale(1.035);
+}
+
 .video-hero .brand-logo--hero {
+  position: relative;
+  z-index: 2;
   filter:
-    drop-shadow(0 0 1px rgba(252, 228, 210, 0.9))
-    drop-shadow(0 0 3px rgba(252, 228, 210, 0.42))
-    drop-shadow(0 1px 2px rgba(21, 2, 19, 1))
-    drop-shadow(0 3px 5px rgba(21, 2, 19, 1))
-    drop-shadow(0 7px 14px rgba(21, 2, 19, 0.98))
-    drop-shadow(0 18px 34px rgba(21, 2, 19, 0.92))
-    drop-shadow(0 38px 76px rgba(21, 2, 19, 0.86))
-    drop-shadow(0 0 92px rgba(21, 2, 19, 0.9))
-    drop-shadow(0 0 148px rgba(21, 2, 19, 0.78));
+    drop-shadow(0 1px 1px rgba(21, 2, 19, 1))
+    drop-shadow(0 3px 5px rgba(21, 2, 19, 0.94))
+    drop-shadow(0 10px 18px rgba(21, 2, 19, 0.82))
+    drop-shadow(0 0 22px rgba(21, 2, 19, 0.72));
 }
 
 .video-hero {
@@ -256,34 +288,11 @@ h3,
 }
 
 .video-hero__center {
-  position: relative;
   align-self: center;
   display: grid;
   grid-row: 2;
   justify-items: center;
   gap: 22px;
-}
-
-.video-hero__center::before {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  width: min(820px, 94vw);
-  aspect-ratio: 2.45 / 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(21, 2, 19, 0.9) 0%,
-      rgba(21, 2, 19, 0.76) 34%,
-      rgba(21, 2, 19, 0.42) 58%,
-      rgba(21, 2, 19, 0) 76%
-    );
-  content: "";
-  filter: blur(18px);
-  pointer-events: none;
-  transform: translate(-50%, -52%);
 }
 
 .video-hero__bottom {
