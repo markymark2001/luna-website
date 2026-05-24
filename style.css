@@ -458,12 +458,17 @@ h3,
 }
 
 .review-marquee {
+  --review-gap: var(--space-5);
+
   display: grid;
-  gap: var(--space-5);
+  gap: var(--review-gap);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
 }
 
 .review-track {
   display: flex;
+  gap: var(--review-gap);
   width: max-content;
   animation: review-slide 42s linear infinite;
   will-change: transform;
@@ -476,8 +481,7 @@ h3,
 .review-group {
   display: flex;
   flex: 0 0 auto;
-  gap: var(--space-5);
-  padding-right: var(--space-5);
+  gap: var(--review-gap);
 }
 
 .review-card {
@@ -572,7 +576,7 @@ h3,
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-50% - (var(--review-gap) / 2)));
   }
 }
 
