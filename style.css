@@ -596,14 +596,12 @@ h3,
 .download-cta__inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(260px, 0.72fr);
-  align-items: center;
-  gap: clamp(40px, 7vw, 88px);
-  min-height: 520px;
+  justify-items: center;
+  min-height: 440px;
   padding: clamp(56px, 8vw, 88px);
-  overflow: hidden;
   background: transparent;
   color: var(--cream-review);
+  text-align: center;
 }
 
 .download-cta__inner::before {
@@ -622,7 +620,7 @@ h3,
   position: relative;
   z-index: 1;
   display: grid;
-  justify-items: start;
+  justify-items: center;
 }
 
 .download-cta h2 {
@@ -644,6 +642,7 @@ h3,
 .download-cta__actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-5);
   margin-top: var(--space-10);
   flex-wrap: wrap;
@@ -683,17 +682,6 @@ h3,
   background: rgba(246, 236, 220, 0.45);
 }
 
-.download-cta__device {
-  position: absolute;
-  right: clamp(-96px, -5vw, -32px);
-  bottom: 0;
-  z-index: 0;
-  width: min(520px, 44vw);
-  transform: translateY(46%);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.08) inset,
-    0 38px 86px -18px rgba(0, 0, 0, 0.48);
-}
 
 .site-footer {
   padding: 18px 0 28px;
@@ -1003,12 +991,8 @@ body:not(.home-page) > footer a {
   }
 
   .download-cta__inner {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: start;
-    min-height: 640px;
+    min-height: 0;
     padding: 44px 24px;
-    text-align: center;
   }
 
   .download-cta__copy {
@@ -1020,12 +1004,6 @@ body:not(.home-page) > footer a {
     justify-content: center;
   }
 
-  .download-cta__device {
-    order: -1;
-    right: 50%;
-    width: min(430px, 112vw);
-    transform: translate(50%, 62%);
-  }
 
   .site-footer {
     padding: 10px 0 24px;
