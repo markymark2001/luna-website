@@ -113,25 +113,34 @@ h3,
   will-change: transform;
 }
 
-.button span {
-  display: block;
+.button > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   transition: transform var(--duration-base) var(--ease-out);
 }
 
-.button span + span {
+.button > span + span {
   position: absolute;
   transform: translateY(220%);
+}
+
+.button-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  fill: currentColor;
 }
 
 .button:hover {
   transform: translateY(-1px);
 }
 
-.button:hover span:first-child {
+.button:hover > span:first-child {
   transform: translateY(-220%);
 }
 
-.button:hover span + span {
+.button:hover > span + span {
   transform: translateY(0);
 }
 
@@ -525,11 +534,11 @@ body:not(.home-page) > footer a {
   }
 
   .button,
-  .button span {
+  .button > span {
     transform: none !important;
   }
 
-  .button span + span {
+  .button > span + span {
     display: none;
   }
 }
