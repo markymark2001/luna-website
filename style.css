@@ -54,6 +54,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   background: var(--cream-body);
   color: var(--ink);
   font-family: var(--font-sans);
