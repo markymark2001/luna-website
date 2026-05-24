@@ -414,10 +414,9 @@
   min-height: 480px;
   padding: clamp(48px, 7vw, 80px) clamp(36px, 6vw, 72px);
   overflow: hidden;
-  border: 1px solid rgba(90, 22, 38, 0.08);
   border-radius: clamp(28px, 4vw, 44px);
   background: var(--cream-section);
-  color: var(--burgundy-deep);
+  color: var(--ink);
 }
 
 .download-cta__copy {
@@ -443,27 +442,15 @@
   margin-top: 18px;
 }
 
-.download-cta .button.primary {
-  background: var(--burgundy-deep);
-  color: var(--cream-review);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.14) inset,
-    0 16px 36px rgba(61, 14, 26, 0.16);
-}
-
 .download-cta__button {
   margin-top: var(--space-2);
-}
-
-.download-cta .button.primary:hover {
-  background: var(--burgundy);
 }
 
 .download-cta__meta {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: var(--burgundy-soft);
+  color: var(--muted);
   font-size: var(--small);
   font-weight: 500;
   line-height: 1;
@@ -478,7 +465,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: var(--burgundy-mute);
+  background: rgba(107, 88, 82, 0.45);
 }
 
 .download-cta__preview {
