@@ -12,6 +12,7 @@
   --app-surface-dark: #150213;
   --brown-action: #2b180a;
   --muted: #6b5852;
+  --gold: #e4ad55;
 
   --space-2: 8px;
   --space-3: 12px;
@@ -283,7 +284,7 @@ h3,
 }
 
 .hero-rating__stars {
-  color: var(--cream-body);
+  color: var(--gold);
   font-size: 15px;
   letter-spacing: 0.08em;
 }
