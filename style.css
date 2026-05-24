@@ -9,6 +9,7 @@
   --cream-action-border: #8a6f63;
   --white: #ffffff;
   --ink: #1a0210;
+  --app-surface-dark: #150213;
   --brown-action: #2b180a;
   --muted: #6b5852;
 
@@ -206,7 +207,7 @@ h3,
   min-height: 100vh;
   overflow: hidden;
   place-items: center;
-  background: #0c0410;
+  background: var(--app-surface-dark);
 }
 
 .video-hero__media,
@@ -224,7 +225,7 @@ h3,
 .video-hero__overlay {
   top: auto;
   height: 28%;
-  background: linear-gradient(to bottom, transparent, #0c0410);
+  background: linear-gradient(to bottom, transparent, var(--app-surface-dark));
   pointer-events: none;
 }
 
@@ -291,7 +292,7 @@ h3,
 .reviews-preview {
   margin-top: -1px;
   padding: 96px 0 112px;
-  background: #0c0410;
+  background: var(--app-surface-dark);
   color: var(--white);
 }
 
