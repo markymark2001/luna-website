@@ -271,7 +271,7 @@
 }
 
 .review-marquee {
-  --review-gap: var(--space-4);
+  --review-gap: var(--space-2);
 
   display: grid;
   gap: var(--review-gap);
@@ -385,16 +385,9 @@
 }
 
 .review-person::before,
-.review-person small {
-  font-weight: 400;
-}
-
+.review-person small,
 .review-card p {
   font-weight: 300;
-}
-
-.review-person small {
-  line-height: 1;
 }
 
 @keyframes review-slide {
