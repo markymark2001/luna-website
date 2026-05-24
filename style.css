@@ -597,7 +597,7 @@ h3,
   align-items: center;
   gap: clamp(36px, 6vw, 72px);
   min-height: 480px;
-  padding: clamp(56px, 8vw, 96px) clamp(36px, 6vw, 72px);
+  padding: clamp(48px, 7vw, 80px) clamp(36px, 6vw, 72px);
   overflow: hidden;
   border-radius: clamp(28px, 4vw, 44px);
   background: var(--burgundy-deep);
@@ -619,20 +619,12 @@ h3,
   letter-spacing: var(--tracking-display);
 }
 
-.download-cta__copy > p {
-  max-width: 500px;
-  margin-top: var(--space-6);
-  color: rgba(246, 236, 220, 0.72);
-  font-size: var(--body);
-  font-weight: 300;
-  line-height: 1.5;
-}
 
 .download-cta__actions {
   display: flex;
   align-items: center;
   gap: var(--space-5);
-  margin-top: var(--space-10);
+  margin-top: var(--space-8);
   flex-wrap: wrap;
 }
 
@@ -679,7 +671,7 @@ h3,
 }
 
 .download-cta__device {
-  width: min(300px, 100%);
+  width: min(280px, 100%);
   transform: translateY(40%);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.08) inset,
@@ -1061,7 +1053,7 @@ body:not(.home-page):not(.legal-page) > footer a {
   }
 
   .download-cta__device {
-    width: min(260px, 76vw);
+    width: min(240px, 72vw);
     transform: translateY(32%);
   }
 
