@@ -492,10 +492,10 @@ h3,
 
 .review-card {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) max-content;
   grid-template-rows: auto auto 1fr;
   column-gap: var(--space-6);
-  row-gap: var(--space-4);
+  row-gap: var(--space-2);
   width: min(560px, calc(100vw - 48px));
   min-height: 230px;
   padding: 30px 34px;
@@ -510,28 +510,33 @@ h3,
 }
 
 .review-person {
-  display: grid;
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  justify-items: end;
-  align-self: start;
-  min-width: 136px;
+  display: contents;
   color: var(--muted);
-  text-align: right;
 }
 
 .review-person span:last-child {
-  display: grid;
-  gap: 4px;
-  min-width: 0;
+  display: contents;
 }
 
-.review-avatar {
-  display: none;
-}
-
+.review-avatar,
 .review-person b {
   display: none;
+}
+
+.review-person::before,
+.review-person small {
+  grid-column: 2;
+  justify-self: end;
+  text-align: right;
+}
+
+.review-person::before {
+  grid-row: 1;
+  content: "9 May";
+}
+
+.review-person small {
+  grid-row: 2;
 }
 
 .review-stars {
@@ -558,6 +563,7 @@ h3,
   grid-column: 1 / -1;
   grid-row: 3;
   max-width: 420px;
+  margin-top: var(--space-4);
   text-wrap: pretty;
 }
 
@@ -570,9 +576,6 @@ h3,
   line-height: 1.4;
 }
 
-.review-person::before {
-  content: "9 May";
-}
 
 @keyframes review-slide {
   from {
