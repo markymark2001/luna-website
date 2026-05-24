@@ -54,6 +54,10 @@
     gap: 8px;
   }
 
+  .video-hero .hero-subtitle {
+    font-size: clamp(14px, 2.3vh, 17px);
+  }
+
   .hero-rating {
     gap: 8px;
     font-size: 12px;
@@ -178,6 +182,10 @@
 
   .download-cta h2 {
     max-width: 100%;
+  }
+
+  .download-cta h2 {
+    font-size: clamp(31px, 8.5vw, 36px);
   }
 
   .download-cta__actions,
