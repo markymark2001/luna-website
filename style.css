@@ -715,12 +715,14 @@ h3,
   gap: var(--space-5);
 }
 
-.site-footer__brand h2 {
+.site-footer__logo {
+  display: inline-flex;
   color: var(--cream-review);
-  font-size: clamp(38px, 5vw, 64px);
-  font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: var(--tracking-display);
+  text-decoration: none;
+}
+
+.brand-logo--footer {
+  width: clamp(132px, 16vw, 184px);
 }
 
 .site-footer__brand p {
