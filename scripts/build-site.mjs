@@ -29,7 +29,7 @@ const pages = [
     title: "Luna",
     description: "Luna is a personal astrology app.",
     bodyClass: "home-page",
-    stylesheetHref: "style.css?v=20260524-13",
+    stylesheetHref: "style.css?v=20260524-14",
     scripts: '<script src="scripts/home.js"></script>',
   },
   {
