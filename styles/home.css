@@ -271,7 +271,7 @@
 }
 
 .review-marquee {
-  --review-gap: var(--space-5);
+  --review-gap: var(--space-4);
 
   display: grid;
   gap: var(--review-gap);
