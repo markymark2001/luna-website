@@ -156,8 +156,7 @@
   line-height: 1.5;
 }
 
-.row-item__subtitle,
-.row-item__meta {
+.row-item__subtitle {
   color: var(--muted);
   font-size: var(--small);
   font-weight: 300;
@@ -305,11 +304,6 @@
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: var(--tracking-display);
-}
-
-.row-item__meta {
-  flex: 0 0 auto;
-  font-style: normal;
 }
 
 .site-header {

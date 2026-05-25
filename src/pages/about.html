@@ -41,42 +41,20 @@ permalink: about/index.html
         <p>We are hiring for a small number of high-impact roles. Send a short note with the role you are interested in and what you would like to build.</p>
       </div>
       <div class="row-list" aria-label="Open positions">
+        {% for role in jobs.openRoles %}
         <article class="row-item">
           <span class="row-item__content">
-            <strong class="row-item__title">Founding Product Designer</strong>
-            <small class="row-item__subtitle">Remote · Full-time</small>
+            <strong class="row-item__title">{{ role.title }}</strong>
+            <small class="row-item__subtitle">{{ role.meta }}</small>
           </span>
           <span class="row-item__actions">
-            <a class="button secondary" href="mailto:mark@mediakey.io?subject=Founding%20Product%20Designer">
+            <a class="button secondary" href="mailto:mark@mediakey.io?subject={{ role.subject }}">
               <span>Apply</span>
               <span aria-hidden="true">Apply</span>
             </a>
           </span>
         </article>
-        <article class="row-item">
-          <span class="row-item__content">
-            <strong class="row-item__title">Founding iOS Engineer</strong>
-            <small class="row-item__subtitle">Remote · Full-time</small>
-          </span>
-          <span class="row-item__actions">
-            <a class="button secondary" href="mailto:mark@mediakey.io?subject=Founding%20iOS%20Engineer">
-              <span>Apply</span>
-              <span aria-hidden="true">Apply</span>
-            </a>
-          </span>
-        </article>
-        <article class="row-item">
-          <span class="row-item__content">
-            <strong class="row-item__title">Astrology Content Lead</strong>
-            <small class="row-item__subtitle">Remote · Full-time</small>
-          </span>
-          <span class="row-item__actions">
-            <a class="button secondary" href="mailto:mark@mediakey.io?subject=Astrology%20Content%20Lead">
-              <span>Apply</span>
-              <span aria-hidden="true">Apply</span>
-            </a>
-          </span>
-        </article>
+        {% endfor %}
       </div>
     </div>
   </section>

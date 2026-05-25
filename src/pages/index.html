@@ -44,10 +44,11 @@ permalink: index.html
 <main>
   <section id="get-the-app" class="features" aria-label="Taia features">
     <div class="wrap features-inner">
-      <article class="feature-block">
+      {% for feature in home.features %}
+      <article class="feature-block{% if feature.reverse %} feature-block--reverse{% endif %}">
         <div class="feature-copy">
-          <h2>Say what’s real</h2>
-          <p>A text you want to send. A person you cannot read. A decision that keeps looping. A low mood, a strange dream, or a question about where your life is heading.</p>
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.copy }}</p>
         </div>
         <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
           <div class="device-frame__screen">
@@ -55,206 +56,28 @@ permalink: index.html
           </div>
         </figure>
       </article>
-      <article class="feature-block feature-block--reverse">
-        <div class="feature-copy">
-          <h2>Read the pattern</h2>
-          <p>Taia looks at your placements, timing, compatibility, and current energy to give you guidance that feels personal instead of generic.</p>
-        </div>
-        <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
-          <div class="device-frame__screen">
-            <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
-          </div>
-        </figure>
-      </article>
-      <article class="feature-block">
-        <div class="feature-copy">
-          <h2>Go deeper</h2>
-          <p>Ask follow-ups, check another angle, or stay with the same question until the answer starts to land.</p>
-        </div>
-        <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
-          <div class="device-frame__screen">
-            <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
-          </div>
-        </figure>
-      </article>
-      <article class="feature-block feature-block--reverse">
-        <div class="feature-copy">
-          <h2>Move with trust</h2>
-          <p>Leave with clearer words, better timing, stronger boundaries, or an intention that helps you meet the moment instead of spiraling around it.</p>
-        </div>
-        <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
-          <div class="device-frame__screen">
-            <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
-          </div>
-        </figure>
-      </article>
+      {% endfor %}
     </div>
   </section>
 
   <section class="reviews" id="reviews" aria-label="User reviews">
     <div class="review-marquee" aria-label="User reviews">
-      <div class="review-track">
+      {% for row in home.reviewRows %}
+      <div class="review-track{% if row.reverse %} review-track--reverse{% endif %}">
         <div class="review-group">
+          {% for review in row.reviews %}
           <article class="review-card">
             <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">MR</span><span><b>Maya R.</b><small>@mayarosen</small></span></div>
+              <div class="review-person"><span class="review-avatar">{{ review.initials }}</span><span><b>{{ review.name }}</b><small>{{ review.handle }}</small></span></div>
               <span class="review-stars" aria-hidden="true">★★★★★</span>
             </div>
-            <h3>Finally had words for it.</h3>
-            <p>It gave me a way to name what I was feeling before I had the words.</p>
+            <h3>{{ review.title }}</h3>
+            <p>{{ review.copy }}</p>
           </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">JS</span><span><b>Jordan S.</b><small>@jord.s</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Specific enough to use.</h3>
-            <p>The prompts are clear enough that I actually know what to do next.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">AL</span><span><b>Ari L.</b><small>@ariluna</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>My pre-conversation ritual.</h3>
-            <p>I use it before big conversations. It helps me slow down.</p>
-          </article>
-        </div>
-        <div class="review-group" aria-hidden="true">
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">MR</span><span><b>Maya R.</b><small>@mayarosen</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Finally had words for it.</h3>
-            <p>It gave me a way to name what I was feeling before I had the words.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">JS</span><span><b>Jordan S.</b><small>@jord.s</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Specific enough to use.</h3>
-            <p>The prompts are clear enough that I actually know what to do next.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">AL</span><span><b>Ari L.</b><small>@ariluna</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>My pre-conversation ritual.</h3>
-            <p>I use it before big conversations. It helps me slow down.</p>
-          </article>
+          {% endfor %}
         </div>
       </div>
-      <div class="review-track review-track--reverse">
-        <div class="review-group">
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">SK</span><span><b>Sam K.</b><small>@sam.asking</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Grounded, not generic.</h3>
-            <p>The astrology feels grounded. It points me back to my own choices.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">LD</span><span><b>Leah D.</b><small>@leahday</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Came for the chart.</h3>
-            <p>I came for the chart. I stayed because the advice is practical.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">PK</span><span><b>Priya K.</b><small>@priyaaaa</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>One question I can answer.</h3>
-            <p>It turns a messy day into one question I can actually answer.</p>
-          </article>
-        </div>
-        <div class="review-group" aria-hidden="true">
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">SK</span><span><b>Sam K.</b><small>@sam.asking</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Grounded, not generic.</h3>
-            <p>The astrology feels grounded. It points me back to my own choices.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">LD</span><span><b>Leah D.</b><small>@leahday</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Came for the chart.</h3>
-            <p>I came for the chart. I stayed because the advice is practical.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">PK</span><span><b>Priya K.</b><small>@priyaaaa</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>One question I can answer.</h3>
-            <p>It turns a messy day into one question I can actually answer.</p>
-          </article>
-        </div>
-      </div>
-      <div class="review-track">
-        <div class="review-group">
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">EH</span><span><b>Elena H.</b><small>@elenamoon</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>A pause button.</h3>
-            <p>Taia has become my pause button when I am spiraling.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">RB</span><span><b>Rae B.</b><small>@raeb</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Calm, pretty, direct.</h3>
-            <p>It is calm, pretty, and surprisingly direct when I need it.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">JM</span><span><b>June M.</b><small>@junem</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>More than prediction.</h3>
-            <p>I like that it does not just predict. It helps me reflect.</p>
-          </article>
-        </div>
-        <div class="review-group" aria-hidden="true">
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">EH</span><span><b>Elena H.</b><small>@elenamoon</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>A pause button.</h3>
-            <p>Taia has become my pause button when I am spiraling.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">RB</span><span><b>Rae B.</b><small>@raeb</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>Calm, pretty, direct.</h3>
-            <p>It is calm, pretty, and surprisingly direct when I need it.</p>
-          </article>
-          <article class="review-card">
-            <div class="review-card__top">
-              <div class="review-person"><span class="review-avatar">JM</span><span><b>June M.</b><small>@junem</small></span></div>
-              <span class="review-stars" aria-hidden="true">★★★★★</span>
-            </div>
-            <h3>More than prediction.</h3>
-            <p>I like that it does not just predict. It helps me reflect.</p>
-          </article>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 
