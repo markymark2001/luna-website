@@ -267,27 +267,26 @@
     gap: var(--space-8);
   }
 
-  .section-title {
-    font-size: clamp(32px, 8.8vw, 44px);
-  }
-
-  .about-who__intro {
+  .split-intro {
     grid-template-columns: 1fr;
     gap: var(--space-8);
   }
 
-  .about-who__metrics {
+  .section-title {
+    font-size: clamp(32px, 8.8vw, 44px);
+  }
+
+  .media-stat-panel__grid {
     grid-template-columns: 1fr;
     padding: var(--space-5);
   }
 
-  .about-who__metric {
+  .stat-card {
     min-height: 132px;
-    border-radius: var(--radius-surface-mobile);
   }
 
-  .about-who__visual,
-  .about-who__metric {
+  .media-stat-panel,
+  .stat-card {
     border-radius: var(--radius-surface-mobile);
   }
 
