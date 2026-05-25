@@ -21,6 +21,11 @@
   padding: 0;
 }
 
+.content-page > main.contact-page {
+  width: 100%;
+  padding: 0;
+}
+
 .about-page {
   color: var(--ink);
 }
