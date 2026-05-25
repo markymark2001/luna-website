@@ -104,11 +104,7 @@
   text-align: center;
 }
 
-.section-intro .kicker {
-  margin-inline: auto;
-}
-
-.section-intro p {
+.section-intro > p:not(.section-tag) {
   margin: var(--space-4) 0 0;
   color: var(--muted);
   font-size: var(--body);
@@ -116,7 +112,7 @@
   line-height: 1.5;
 }
 
-.kicker {
+.section-tag {
   display: inline-flex;
   align-items: center;
   width: fit-content;
@@ -129,6 +125,10 @@
   font-weight: 500;
   line-height: 1.5;
   text-transform: none;
+}
+
+.section-tag--center {
+  margin-inline: auto;
 }
 
 .section-title {

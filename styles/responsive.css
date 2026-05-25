@@ -254,7 +254,7 @@
     font-size: var(--section-heading-mobile);
   }
 
-  .about-hero p:not(.kicker) {
+  .about-hero p:not(.section-tag) {
     font-size: var(--body);
   }
 
