@@ -32,8 +32,22 @@
   background: var(--cream-header);
 }
 
+.about-hero--centered {
+  align-items: center;
+  text-align: center;
+}
+
 .about-hero__inner {
   padding: clamp(112px, 12vw, 136px) 0 clamp(56px, 8vw, 88px);
+}
+
+.about-hero--centered .about-hero__inner {
+  display: grid;
+  justify-items: center;
+}
+
+.about-hero--centered .page-hero-title {
+  max-width: 760px;
 }
 
 .about-hero p:not(.kicker) {
@@ -52,6 +66,10 @@
   flex-wrap: wrap;
   gap: var(--space-4);
   margin-top: var(--space-8);
+}
+
+.about-hero--centered .about-hero__actions {
+  justify-content: center;
 }
 
 .about-link {
