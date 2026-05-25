@@ -251,11 +251,11 @@
   }
 
   .about-hero h1 {
-    font-size: clamp(40px, 11vw, 50px);
+    font-size: var(--section-heading-mobile);
   }
 
   .about-hero p:not(.kicker) {
-    font-size: 17px;
+    font-size: var(--body);
   }
 
   .section-band {

@@ -100,16 +100,16 @@
   max-width: 720px;
   color: var(--ink);
   font-size: var(--section-heading);
-  font-weight: var(--display-weight);
+  font-weight: 400;
   line-height: 1;
   letter-spacing: var(--tracking-display);
 }
 
 .page-hero-title {
-  max-width: 920px;
+  max-width: 620px;
   color: var(--ink);
-  font-size: var(--hero-page-heading);
-  font-weight: var(--display-weight);
+  font-size: var(--section-heading);
+  font-weight: 400;
   line-height: 1;
   letter-spacing: var(--tracking-display);
 }
@@ -118,7 +118,7 @@
   color: var(--muted);
   font-size: var(--body);
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .split-layout {

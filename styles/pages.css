@@ -26,7 +26,7 @@
 }
 
 .about-hero {
-  min-height: clamp(560px, 72vh, 680px);
+  min-height: clamp(520px, 68vh, 640px);
   display: flex;
   align-items: flex-end;
   background: var(--cream-header);
@@ -37,12 +37,13 @@
 }
 
 .about-hero p:not(.kicker) {
-  max-width: 620px;
+  max-width: 520px;
   margin: var(--space-8) 0 0;
   color: var(--muted);
-  font-size: var(--lead);
+  font-size: var(--body);
   font-weight: 300;
-  line-height: 1.55;
+  line-height: 1.5;
+  text-wrap: balance;
 }
 
 .about-hero__actions {
@@ -78,7 +79,7 @@
   color: var(--muted);
   font-size: var(--body);
   font-weight: 300;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .about-team {
@@ -115,9 +116,10 @@
 
 .about-build__panel strong {
   color: var(--ink);
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: var(--panel-heading);
   font-weight: 400;
   line-height: 1.05;
+  letter-spacing: var(--tracking-display);
 }
 
 .about-jobs {
