@@ -196,6 +196,11 @@
   background: var(--cream-section);
 }
 
+.media-stat-panel--image-only {
+  min-height: auto;
+  aspect-ratio: 1344 / 896;
+}
+
 .media-stat-panel__image {
   position: absolute;
   inset: 0;
