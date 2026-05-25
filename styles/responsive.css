@@ -287,14 +287,18 @@
   }
 
   .about-who__visual,
-  .about-jobs__inner {
+  .about-who__metric {
     border-radius: var(--radius-surface-mobile);
   }
 
   .about-jobs__inner {
+    gap: var(--space-10);
+  }
+
+  .about-job {
     align-items: flex-start;
     flex-direction: column;
-    gap: var(--space-6);
+    gap: var(--space-3);
   }
 
   .device-frame--iphone {
