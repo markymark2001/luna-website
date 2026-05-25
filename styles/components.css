@@ -99,9 +99,16 @@
 }
 
 .kicker {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
   margin: 0 0 var(--space-4);
-  color: var(--burgundy-soft);
-  font-size: var(--small);
+  padding: 7px 13px;
+  border: 1px solid rgba(90, 22, 38, 0.16);
+  border-radius: var(--radius-pill);
+  background: rgba(90, 22, 38, 0.07);
+  color: var(--burgundy);
+  font-size: 12px;
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
