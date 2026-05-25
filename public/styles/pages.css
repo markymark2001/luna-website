@@ -8,6 +8,7 @@
   background: var(--cream-header);
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .content-page > main {

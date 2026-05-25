@@ -11,6 +11,23 @@ document.querySelectorAll(".review-track").forEach((track) => {
   }
 });
 
+const heroVideo = document.querySelector(".video-hero__media");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+const syncHeroVideoMotion = () => {
+  if (!heroVideo) return;
+
+  if (reducedMotion.matches) {
+    heroVideo.pause();
+    return;
+  }
+
+  heroVideo.play().catch(() => {});
+};
+
+syncHeroVideoMotion();
+reducedMotion.addEventListener("change", syncHeroVideoMotion);
+
 const header = document.querySelector(".site-header");
 const heroCta = document.querySelector(".video-hero__bottom .button");
 

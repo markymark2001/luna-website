@@ -101,7 +101,7 @@ If something appears during verification but you don't know which check:
 Use a narrow one-at-a-time command to isolate the polluting input:
 
 ```bash
-for page in index.html support.html privacy.html terms.html; do
+for page in / /support/ /privacy/ /terms/; do
   printf 'checking %s\n' "$page"
   # Replace this with the exact command that reproduces the pollution.
 done

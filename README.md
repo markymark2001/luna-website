@@ -132,8 +132,8 @@ After DNS propagation, your website will be accessible at:
 
 - `https://lunaapp.io`
 - `https://www.lunaapp.io`
-- `https://lunaapp.io/privacy.html`
-- `https://lunaapp.io/terms.html`
+- `https://lunaapp.io/privacy/`
+- `https://lunaapp.io/terms/`
 
 **Test your setup:**
 
@@ -154,8 +154,8 @@ Once your website is live, use these URLs in App Store Connect:
 
 **App Information:**
 - **Marketing URL:** `https://lunaapp.io`
-- **Privacy Policy URL:** `https://lunaapp.io/privacy.html`
-- **Terms of Service URL:** `https://lunaapp.io/terms.html` (if requested)
+- **Privacy Policy URL:** `https://lunaapp.io/privacy/`
+- **Terms of Service URL:** `https://lunaapp.io/terms/` (if requested)
 
 **Subscription Information:**
 - Include privacy policy and terms URLs in subscription descriptions
@@ -212,11 +212,11 @@ Do not edit `dist/` directly. It is generated output and is rebuilt by GitHub Ac
 
 ### 404 Error on Subpages
 
-**Problem:** `lunaapp.io` works but `lunaapp.io/privacy.html` shows 404
+**Problem:** `lunaapp.io` works but `lunaapp.io/privacy/` shows 404
 
 **Solutions:**
-1. Ensure files are in the root directory (not in a subdirectory)
-2. Check file names are lowercase and match exactly: `privacy.html`, not `Privacy.html`
+1. Ensure GitHub Pages is publishing from the Actions workflow artifact, not from the repository root
+2. Run `npm run build` and confirm `dist/privacy/index.html` and `dist/terms/index.html` exist
 3. Clear GitHub Pages cache by making a small commit and pushing
 
 ### Cloudflare Issues
@@ -232,8 +232,8 @@ Do not edit `dist/` directly. It is generated output and is rebuilt by GitHub Ac
 
 Before submitting to App Store, verify:
 
-- [ ] Privacy Policy is accessible at `https://lunaapp.io/privacy.html`
-- [ ] Terms of Service is accessible at `https://lunaapp.io/terms.html`
+- [ ] Privacy Policy is accessible at `https://lunaapp.io/privacy/`
+- [ ] Terms of Service is accessible at `https://lunaapp.io/terms/`
 - [ ] HTTPS is enabled (green padlock in browser)
 - [ ] Links work on mobile devices (test in Safari on iPhone)
 - [ ] Contact email is correct and monitored: mark@mediakey.io
