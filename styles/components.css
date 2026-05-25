@@ -71,14 +71,14 @@
 }
 
 .button.secondary {
-  border-color: rgba(43, 24, 10, 0.22);
-  background: transparent;
+  border-color: transparent;
+  background: var(--cream-action-hover);
   color: var(--brown-action);
 }
 
 .button.secondary:hover {
-  border-color: rgba(43, 24, 10, 0.38);
-  background: rgba(43, 24, 10, 0.06);
+  border-color: transparent;
+  background: var(--cream-action-border);
 }
 
 .section-band {
