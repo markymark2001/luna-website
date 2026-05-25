@@ -1,6 +1,6 @@
 # Luna Website
 
-Official website for Luna - AI-Powered Astrology mobile app.
+Official website for Taia, the astrology mobile app.
 
 This website hosts the Privacy Policy and Terms of Service required for App Store submission.
 
@@ -12,50 +12,39 @@ This website hosts the Privacy Policy and Terms of Service required for App Stor
 - `dist/` - Generated site output, ignored by git
 - `.github/workflows/pages.yml` - GitHub Pages build and deploy workflow
 
+## Hosting Contract
+
+This site is built for the custom domain root at `https://lunaapp.io/`.
+Templates use root-relative URLs such as `/style.css`, `/privacy/`, and
+`/contact/`, so the generated artifact is not intended to be served from a
+GitHub Pages project subpath.
+
+GitHub Pages must publish from the Actions workflow artifact, and
+`public/CNAME` must remain present so the built artifact contains `dist/CNAME`.
+
 ## Setup Instructions
 
-### 1. Create GitHub Repository
+### 1. Repository
 
 ```bash
-# Navigate to the website directory
 cd luna-website
-
-# Initialize git repository
-git init
-
-# Add all files
-git add .
-
-# Create initial commit
-git commit -m "Initial Luna website with privacy policy and terms"
-
-# Create repository on GitHub (via web interface or gh CLI)
-# If using gh CLI:
-gh repo create luna-website --public --source=. --remote=origin --push
-
-# If creating manually on GitHub, add remote and push:
-git remote add origin https://github.com/YOUR_USERNAME/luna-website.git
-git branch -M main
-git push -u origin main
+git remote -v
 ```
 
-### 2. Enable GitHub Pages
+Expected repository: `https://github.com/markymark2001/luna-website`.
 
-**Option A: Via GitHub Web Interface (Recommended)**
+### 2. Enable GitHub Pages Actions
 
-1. Go to your repository: `https://github.com/YOUR_USERNAME/luna-website`
+Use the repository Pages settings to select **GitHub Actions** as the publishing
+source. The included workflow builds `dist/` and deploys that artifact.
+
+1. Go to `https://github.com/markymark2001/luna-website`.
 2. Click **Settings** (top navigation)
 3. Click **Pages** (left sidebar)
 4. Under "Build and deployment":
    - Source: **GitHub Actions**
 5. Click **Save**
-6. Wait 1-2 minutes for deployment
-
-Your site will be available at: `https://YOUR_USERNAME.github.io/luna-website/`
-
-**Option B: Via GitHub CLI**
-
-Use the repository Pages settings to select **GitHub Actions** as the publishing source. The included workflow builds `dist/` and deploys that artifact.
+6. Confirm Pages uses the `lunaapp.io` custom domain.
 
 ### 3. Connect Custom Domain (lunaapp.io)
 
@@ -71,9 +60,7 @@ Log into your domain registrar (where you purchased lunaapp.io) and add these DN
 | A | @ | 185.199.109.153 | 3600 |
 | A | @ | 185.199.110.153 | 3600 |
 | A | @ | 185.199.111.153 | 3600 |
-| CNAME | www | YOUR_USERNAME.github.io | 3600 |
-
-**Replace `YOUR_USERNAME` with your actual GitHub username.**
+| CNAME | www | markymark2001.github.io | 3600 |
 
 **Popular Domain Registrars:**
 
@@ -141,7 +128,7 @@ After DNS propagation, your website will be accessible at:
 # Check DNS records (should show GitHub IPs)
 dig lunaapp.io A
 
-# Check CNAME (should show your GitHub Pages URL)
+# Check CNAME (should show the GitHub Pages host)
 dig www.lunaapp.io CNAME
 
 # Test HTTPS (should return 200 OK)
@@ -257,7 +244,7 @@ Before submitting to App Store, verify:
 
 For questions about this website setup, contact:
 - Email: mark@mediakey.io
-- GitHub: https://github.com/YOUR_USERNAME/luna-website
+- GitHub: https://github.com/markymark2001/luna-website
 
 ---
 

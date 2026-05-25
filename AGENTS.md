@@ -18,6 +18,7 @@ repo helpers, and relevant MCP/plugin capabilities before inventing workflows or
 Make reasonable assumptions when safe. Stop with a concrete blocker when progress requires missing access,
 missing external setup, an unsafe production action, or an explicit user decision.
 
+Read `architecture.md` before planning or making code changes.
 Scan `docs/` for relevant durable context before editing.
 
 Before implementing anything, comprehensive web research is required: always use web search, official SDK/framework/library/product documentation, and multiple reputable examples. Prefer established patterns over invention.
