@@ -267,64 +267,28 @@
     gap: var(--space-8);
   }
 
-  .about-values {
-    padding-bottom: var(--space-16);
-  }
-
-  .about-values__card {
-    min-height: 600px;
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
-    border-radius: var(--radius-surface-mobile);
-    background:
-      linear-gradient(180deg, rgba(26, 2, 16, 0.82), rgba(26, 2, 16, 0.48)),
-      url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80") center / cover;
-  }
-
   .section-title {
     font-size: clamp(32px, 8.8vw, 44px);
   }
 
-  .about-build__panel,
-  .media-card,
-  .visual-band,
-  .glass-item,
-  .about-jobs__inner {
+  .about-who__intro {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .about-who__metrics {
+    grid-template-columns: 1fr;
+    padding: var(--space-5);
+  }
+
+  .about-who__metric {
+    min-height: 132px;
     border-radius: var(--radius-surface-mobile);
   }
 
-  .media-strip {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-3);
-  }
-
-  .about-team {
-    margin-top: var(--space-10);
-  }
-
-  .media-card,
-  .media-card img {
-    min-height: 188px;
-  }
-
-  .media-card__content {
-    left: var(--space-4);
-    right: var(--space-4);
-    bottom: var(--space-4);
-  }
-
-  .visual-band {
-    min-height: auto;
-    padding: var(--space-4);
-  }
-
-  .glass-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .glass-item {
-    min-height: 0;
-    margin: 0;
+  .about-who__visual,
+  .about-jobs__inner {
+    border-radius: var(--radius-surface-mobile);
   }
 
   .about-jobs__inner {
