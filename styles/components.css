@@ -186,6 +186,19 @@
   line-height: 1.5;
 }
 
+.split-intro__copy a {
+  color: var(--brown-action);
+  font-weight: 500;
+  text-decoration-color: currentColor;
+  text-underline-offset: 4px;
+}
+
+.split-intro__link-line {
+  display: block;
+  margin-top: 1lh;
+  width: fit-content;
+}
+
 .split-intro__stack {
   display: grid;
   justify-items: start;
