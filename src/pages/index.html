@@ -52,7 +52,11 @@ permalink: index.html
         </div>
         <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
           <div class="device-frame__screen">
-            <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
+            {% if feature.visual == "say-real" %}
+              {% include "partials/visuals/say-real.njk" %}
+            {% else %}
+              <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
+            {% endif %}
           </div>
         </figure>
       </article>

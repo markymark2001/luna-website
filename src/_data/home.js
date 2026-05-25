@@ -2,7 +2,8 @@ export default {
   features: [
     {
       title: "Say what’s real",
-      copy: "A text you want to send. A person you cannot read. A decision that keeps looping. A low mood, a strange dream, or a question about where your life is heading."
+      copy: "A text you want to send. A person you cannot read. A decision that keeps looping. A low mood, a strange dream, or a question about where your life is heading.",
+      visual: "say-real"
     },
     {
       title: "Read the pattern",
