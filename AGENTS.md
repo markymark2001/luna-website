@@ -43,9 +43,6 @@ Workflows are procedural runbooks.
   read and follow `docs/workflows/systematic-debugging.md` before proposing or applying fixes.
 - Spec writing or product decision specs:
   read and follow `docs/workflows/specs.md` before acting.
-- Codebase, branch, PR, or implementation review when that review is your sole task:
-  read and follow `docs/workflows/reviewing.md` before acting. If you are implementing
-  changes and only running review as part of the normal end-to-end flow, do not use this workflow.
 - Runtime evidence selected by the agent, local website smoke checks, or browser console inspection:
   read and follow `docs/workflows/runtime-evidence.md` only when the agent selects runtime evidence,
   runs local website actions, or inspects browser console output.
