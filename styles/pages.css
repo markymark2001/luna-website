@@ -11,7 +11,7 @@
 }
 
 .content-page > main {
-  width: min(var(--container-readable), calc(100% - var(--page-gutter)));
+  width: min(var(--container-page), calc(100% - var(--page-gutter)));
   margin: 0 auto;
   padding: var(--space-12) 0 var(--space-20);
 }
@@ -217,7 +217,7 @@
 }
 
 .legal-document h1 {
-  max-width: var(--container-readable);
+  max-width: var(--container-page);
   margin-bottom: var(--space-10);
   color: var(--ink);
   font-size: clamp(38px, 5vw, 56px);

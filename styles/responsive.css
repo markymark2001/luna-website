@@ -99,10 +99,6 @@
     width: min(var(--container-wide), calc(100% - var(--page-gutter-mobile)));
   }
 
-  .container-readable {
-    width: min(var(--container-readable), calc(100% - var(--page-gutter-mobile)));
-  }
-
   .header-inner {
     min-height: 72px;
   }

@@ -4,7 +4,7 @@
 
 **Goal:** Fix the failed About-page refactor by making page width, text alignment, heading scale, and surface proportions come from one central layout system instead of page-specific wrapper exceptions.
 
-**Architecture:** Keep the static-site build flow unchanged. Replace the current ambiguous `.wrap` contract with explicit container primitives in `styles/base.css`, keep reusable layout/type/surface primitives in `styles/components.css`, and remove all page-specific container-width rules from About/Home/Legal styles. About, Home, footer, CTA, and legal pages should opt into the same named primitives so width differences are intentional and visible in markup.
+**Architecture:** Keep the static-site build flow unchanged. Replace the current ambiguous `.wrap` contract with explicit container primitives in `styles/base.css`, keep reusable layout/type/surface primitives in `styles/components.css`, and remove all page-specific container-width rules from About/Home/Legal styles. About, Home, footer, CTA, and legal pages should use the same standard `.wrap` content container; only the header uses a wider shell.
 
 **Tech Stack:** Static HTML fragments, CSS custom properties, shared CSS primitives, Node build script, local Python static server, Codex browser evidence. Research basis: MDN CSS custom properties for centralized reusable values, Material layout guidance for consistent margins/gutters, Apple typography guidance for hierarchy/legibility, and Every Layout’s composable primitive model.
 
@@ -43,12 +43,11 @@ In `styles/tokens.css`, replace or augment the current container variables with 
 ```css
 --container-page: 980px;
 --container-wide: 1120px;
---container-readable: 640px;
 --page-gutter: 64px;
 --page-gutter-mobile: 32px;
 ```
 
-Expected: `980px` becomes the default aligned website content width used by Home, About, shared footer, and shared CTA. `1120px` exists only for deliberate wide media. `640px` exists only for legal/readable long text.
+Expected: `980px` becomes the default aligned website content width used by Home, About, legal pages, shared footer, and shared CTA. `1120px` exists only for deliberate wide shells such as the header.
 
 - [x] **Step 2: Centralize container classes**
 
@@ -61,13 +60,9 @@ In `styles/base.css`, replace the current `.wrap` plus `.home-page main .wrap` o
   margin: 0 auto;
 }
 
-.container-wide {
+.container-wide,
+.container-shell {
   width: min(var(--container-wide), calc(100% - var(--page-gutter)));
-  margin: 0 auto;
-}
-
-.container-readable {
-  width: min(var(--container-readable), calc(100% - var(--page-gutter)));
   margin: 0 auto;
 }
 ```
@@ -86,36 +81,36 @@ Delete this rule from `styles/base.css`:
 }
 ```
 
-Expected: Home, About, footer, and CTA use the same default container primitive unless markup explicitly opts into `container-wide` or `container-readable`.
+Expected: Home, About, legal pages, footer, and CTA use the same default container primitive unless markup explicitly opts into `container-wide` or `container-shell`.
 
-### Task 3: Move Legal Pages Onto The Readable Container
+### Task 3: Move Legal Pages Onto The Standard Container
 
 **Files:**
 - Modify: `src/pages/privacy.html`
 - Modify: `src/pages/terms.html`
 - Modify: `styles/pages.css`
 
-- [x] **Step 1: Add readable container class in legal fragments**
+- [x] **Step 1: Add standard container class in legal fragments**
 
 Change each legal root content wrapper from:
-
-```html
-<main class="legal-document">
-```
-
-to:
 
 ```html
 <main class="legal-document container-readable">
 ```
 
-Expected: legal pages declare the reason they are narrower in markup instead of hiding width in a page-specific CSS selector.
+to:
+
+```html
+<main class="legal-document wrap">
+```
+
+Expected: legal pages use the same standard site container as other public pages.
 
 - [x] **Step 2: Remove legal width from page CSS**
 
-In `styles/pages.css`, remove `width: min(640px, calc(100% - 64px))` or `width: min(var(--content-container), calc(100% - 32px))` from `.legal-document` and responsive legal rules. Keep only legal-specific padding, color, typography, and document spacing.
+In `styles/pages.css`, remove `width: min(640px, calc(100% - 64px))`, `container-readable`, or `width: min(var(--content-container), calc(100% - 32px))` from `.legal-document` and responsive legal rules. Keep only legal-specific padding, color, typography, and document spacing.
 
-Expected: legal width comes exclusively from `.container-readable`.
+Expected: legal width comes exclusively from `.wrap`.
 
 ### Task 4: Make Wide Media Explicit
 
@@ -132,13 +127,13 @@ Use default `.wrap` for:
 <div class="wrap about-jobs__inner">
 ```
 
-Use `container-wide` only for the Claura-style media strip if it should intentionally breathe wider:
+Use the standard `.wrap` for the Claura-style media strip so it aligns with the rest of the page:
 
 ```html
-<div class="container-wide media-strip about-team" aria-label="Taia team">
+<div class="wrap media-strip about-team" aria-label="Taia team">
 ```
 
-Expected: text aligns with Home and Legal intent. The only wide element is the team image strip, and it is obvious in markup.
+Expected: text, media, jobs, Home, Legal, CTA, and footer align to the same content container. Only the header uses the wider shell.
 
 - [x] **Step 2: Keep values band aligned by default**
 
@@ -193,12 +188,9 @@ with:
   width: min(var(--container-page), calc(100% - var(--page-gutter-mobile)));
 }
 
-.container-wide {
+.container-wide,
+.container-shell {
   width: min(var(--container-wide), calc(100% - var(--page-gutter-mobile)));
-}
-
-.container-readable {
-  width: min(var(--container-readable), calc(100% - var(--page-gutter-mobile)));
 }
 ```
 
@@ -215,10 +207,10 @@ Expected: mobile gutters and widths are centralized for every page type.
 Run:
 
 ```bash
-rg -n "980px|1120px|640px|820px|calc\\(100% - (64px|48px|32px)\\)|content-container|--container\\b|\\.about-page \\.wrap|home-page main \\.wrap|download-cta > \\.wrap|site-footer > \\.wrap" styles src
+rg -n "980px|1120px|640px|820px|calc\\(100% - (64px|48px|32px)\\)|content-container|container-readable|--container\\b|\\.about-page \\.wrap|home-page main \\.wrap|download-cta > \\.wrap|site-footer > \\.wrap" styles src
 ```
 
-Expected: remaining matches are either token declarations in `styles/tokens.css`, acceptable component-internal widths such as phone-frame sizing, or lines intentionally using `container-page`, `container-wide`, or `container-readable`.
+Expected: remaining matches are either token declarations in `styles/tokens.css`, acceptable component-internal widths such as phone-frame sizing, or lines intentionally using `container-page`, `container-wide`, or `container-shell`.
 
 - [x] **Step 2: Fix invalid matches**
 
@@ -227,7 +219,6 @@ For any match that controls page alignment, replace it with one of:
 ```css
 var(--container-page)
 var(--container-wide)
-var(--container-readable)
 var(--page-gutter)
 var(--page-gutter-mobile)
 ```
@@ -282,7 +273,7 @@ Expected:
 
 ```text
 Home feature text left edge, About hero text left edge, About section text left edge, footer columns, and CTA content align to the same default container.
-Legal copy is intentionally narrower and centered through container-readable.
+Legal copy uses the same standard content container.
 No browser console errors.
 ```
 

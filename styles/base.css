@@ -57,8 +57,3 @@ h3,
   width: min(var(--container-wide), calc(100% - var(--page-gutter)));
   margin: 0 auto;
 }
-
-.container-readable {
-  width: min(var(--container-readable), calc(100% - var(--page-gutter)));
-  margin: 0 auto;
-}
