@@ -44,7 +44,7 @@ smallest set of pages affected by the change.
 Default pages:
 
 - `http://localhost:8080/`
-- `http://localhost:8080/support/`
+- `http://localhost:8080/contact/`
 - `http://localhost:8080/privacy/`
 - `http://localhost:8080/terms/`
 
@@ -65,7 +65,7 @@ Use command-line checks when they prove something browser automation does not:
 curl -I http://localhost:8080/
 curl -I http://localhost:8080/privacy/
 curl -I http://localhost:8080/terms/
-curl -I http://localhost:8080/support/
+curl -I http://localhost:8080/contact/
 ```
 
 Expected result for public pages is `200 OK`.
