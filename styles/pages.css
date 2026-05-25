@@ -65,7 +65,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-4);
-  margin-top: var(--space-5);
+  margin-top: var(--space-10);
 }
 
 .about-hero--centered .about-hero__actions {
