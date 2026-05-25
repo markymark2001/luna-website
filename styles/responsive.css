@@ -267,6 +267,16 @@
     gap: var(--space-8);
   }
 
+  .about-values {
+    padding-bottom: var(--space-16);
+  }
+
+  .about-values__card {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    border-radius: var(--radius-surface-mobile);
+  }
+
   .section-title {
     font-size: clamp(32px, 8.8vw, 44px);
   }
