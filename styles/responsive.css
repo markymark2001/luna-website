@@ -300,6 +300,11 @@
     gap: var(--space-3);
   }
 
+  .row-item__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
   .device-frame--iphone {
     width: min(330px, 82vw);
   }
