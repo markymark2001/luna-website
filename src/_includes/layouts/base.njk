@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  {% include "partials/head.njk" %}
+  <body id="top" class="{{ bodyClass }}">
+    {% include "partials/header.njk" %}
+
+    {{ content | safe }}
+
+    {% include "partials/footer.njk" %}
+    {% for script in pageScripts or [] %}
+    <script src="{{ script }}"></script>
+    {% endfor %}
+  </body>
+</html>

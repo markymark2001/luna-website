@@ -193,6 +193,12 @@
   text-align: left;
 }
 
+.legal-meta {
+  margin: calc(var(--space-6) * -1) 0 var(--space-8);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .legal-copy {
   display: grid;
   gap: var(--space-4);

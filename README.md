@@ -6,10 +6,11 @@ This website hosts the Privacy Policy and Terms of Service required for App Stor
 
 ## Contents
 
-- `index.html` - Landing page
-- `privacy.html` - Privacy Policy
-- `terms.html` - Terms of Service
-- `style.css` - Stylesheet
+- `src/pages/` - Authored page content
+- `src/_includes/` - Shared Eleventy layouts and partials
+- `public/` - Static assets copied to the deployed site root
+- `dist/` - Generated site output, ignored by git
+- `.github/workflows/pages.yml` - GitHub Pages build and deploy workflow
 
 ## Setup Instructions
 
@@ -46,9 +47,7 @@ git push -u origin main
 2. Click **Settings** (top navigation)
 3. Click **Pages** (left sidebar)
 4. Under "Build and deployment":
-   - Source: **Deploy from a branch**
-   - Branch: **main** (or **master**)
-   - Folder: **/ (root)**
+   - Source: **GitHub Actions**
 5. Click **Save**
 6. Wait 1-2 minutes for deployment
 
@@ -56,9 +55,7 @@ Your site will be available at: `https://YOUR_USERNAME.github.io/luna-website/`
 
 **Option B: Via GitHub CLI**
 
-```bash
-gh repo edit --enable-pages --pages-branch main
-```
+Use the repository Pages settings to select **GitHub Actions** as the publishing source. The included workflow builds `dist/` and deploys that artifact.
 
 ### 3. Connect Custom Domain (lunaapp.io)
 
@@ -168,11 +165,14 @@ Once your website is live, use these URLs in App Store Connect:
 To update the website content:
 
 ```bash
-# Make content edits in src/pages or shared shell edits in src/partials
+# Make content edits in src/pages or shared shell edits in src/_includes
 vim src/pages/privacy.html  # or use your preferred editor
 
-# Regenerate the root HTML files used by GitHub Pages
-node scripts/build-site.mjs
+# Build the generated site locally
+npm run build
+
+# Preview with Eleventy's dev server
+npm run dev
 
 # Commit changes
 git add .
@@ -183,6 +183,8 @@ git push origin main
 
 # GitHub Pages will automatically redeploy (1-2 minutes)
 ```
+
+Do not edit `dist/` directly. It is generated output and is rebuilt by GitHub Actions.
 
 ## Troubleshooting
 

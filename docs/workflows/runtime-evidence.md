@@ -20,10 +20,16 @@ describes browser-visible behavior.
 
 ## Local Server
 
-Serve the site from the repo root:
+Build the generated site:
 
 ```bash
-python3 -m http.server 8080 --bind 127.0.0.1
+npm run build
+```
+
+Serve the generated site from `dist`:
+
+```bash
+python3 -m http.server 8080 --bind 127.0.0.1 --directory dist
 ```
 
 If port `8080` is busy, choose another local port and state the exact URL used.

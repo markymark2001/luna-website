@@ -3,6 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd -P)"
+SITE_DIR="$ROOT_DIR/dist"
 REQUESTED_PORT="${LUNA_WEBSITE_PORT:-8080}"
 HOST="127.0.0.1"
 PORT=""
@@ -24,8 +25,9 @@ cleanup() {
 trap cleanup EXIT INT TERM
 
 command -v python3 >/dev/null 2>&1 || fail "python3 is required."
+command -v npm >/dev/null 2>&1 || fail "npm is required."
 command -v open >/dev/null 2>&1 || fail "macOS open is required."
-[[ -f "$ROOT_DIR/index.html" ]] || fail "index.html not found at $ROOT_DIR."
+[[ -f "$ROOT_DIR/package.json" ]] || fail "package.json not found at $ROOT_DIR."
 
 port_is_available() {
   local candidate_port="$1"
@@ -63,11 +65,14 @@ select_port() {
 select_port "$REQUESTED_PORT"
 URL="http://$HOST:$PORT/"
 
-python3 -m http.server "$PORT" --bind "$HOST" --directory "$ROOT_DIR" &
+npm --prefix "$ROOT_DIR" run build
+[[ -f "$SITE_DIR/index.html" ]] || fail "Built index.html not found at $SITE_DIR."
+
+python3 -m http.server "$PORT" --bind "$HOST" --directory "$SITE_DIR" &
 SERVER_PID="$!"
 
 for _ in $(seq 1 50); do
-  if python3 - "$URL" "$ROOT_DIR/index.html" <<'PY' >/dev/null 2>&1
+  if python3 - "$URL" "$SITE_DIR/index.html" <<'PY' >/dev/null 2>&1
 import sys
 from pathlib import Path
 from urllib.request import urlopen
@@ -92,6 +97,7 @@ fi
 [[ "$SERVER_READY" == "true" ]] || fail "Timed out waiting for $URL."
 
 open -a "Google Chrome" "$URL"
-printf '[luna-website] Serving %s at %s\n' "$ROOT_DIR" "$URL"
+printf '[luna-website] Serving %s at %s\n' "$SITE_DIR" "$URL"
+printf '[luna-website] Built site directory: %s\n' "$SITE_DIR"
 printf '[luna-website] Press Ctrl-C to stop.\n'
 wait "$SERVER_PID"
