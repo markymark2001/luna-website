@@ -70,6 +70,17 @@
   box-shadow: 0 12px 28px rgba(43, 24, 10, 0.16);
 }
 
+.button.secondary {
+  border-color: rgba(43, 24, 10, 0.22);
+  background: transparent;
+  color: var(--brown-action);
+}
+
+.button.secondary:hover {
+  border-color: rgba(43, 24, 10, 0.38);
+  background: rgba(43, 24, 10, 0.06);
+}
+
 .section-band {
   padding: var(--section-padding-block);
   background: var(--cream-body);

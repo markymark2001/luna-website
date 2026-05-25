@@ -26,7 +26,7 @@
 }
 
 .about-hero {
-  min-height: clamp(520px, 68vh, 640px);
+  min-height: clamp(360px, 46vh, 440px);
   display: flex;
   align-items: flex-end;
   background: var(--cream-header);
@@ -38,7 +38,7 @@
 }
 
 .about-hero__inner {
-  padding: clamp(112px, 12vw, 136px) 0 clamp(56px, 8vw, 88px);
+  padding: clamp(76px, 8vw, 96px) 0 clamp(36px, 5vw, 56px);
 }
 
 .about-hero--centered .about-hero__inner {
@@ -65,7 +65,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: var(--space-4);
-  margin-top: var(--space-8);
+  margin-top: var(--space-5);
 }
 
 .about-hero--centered .about-hero__actions {
