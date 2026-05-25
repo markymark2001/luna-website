@@ -94,6 +94,11 @@
   gap: var(--space-12);
 }
 
+.contact-section__inner {
+  display: grid;
+  gap: var(--space-12);
+}
+
 .about-jobs {
   padding-bottom: clamp(48px, 7vw, 88px);
 }
