@@ -42,13 +42,18 @@ h3,
   letter-spacing: 0;
 }
 
+.container,
 .wrap {
-  width: min(var(--container), calc(100% - 64px));
+  width: min(var(--container-page), calc(100% - var(--page-gutter)));
   margin: 0 auto;
 }
 
-.home-page main .wrap,
-.download-cta > .wrap,
-.site-footer > .wrap {
-  width: min(var(--content-container), calc(100% - 64px));
+.container-wide {
+  width: min(var(--container-wide), calc(100% - var(--page-gutter)));
+  margin: 0 auto;
+}
+
+.container-readable {
+  width: min(var(--container-readable), calc(100% - var(--page-gutter)));
+  margin: 0 auto;
 }

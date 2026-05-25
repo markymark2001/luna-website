@@ -86,14 +86,17 @@
 }
 
 @media (max-width: 720px) {
+  .container,
   .wrap {
-    width: min(var(--container), calc(100% - 32px));
+    width: min(var(--container-page), calc(100% - var(--page-gutter-mobile)));
   }
 
-  .home-page main .wrap,
-  .download-cta > .wrap,
-  .site-footer > .wrap {
-    width: min(var(--content-container), calc(100% - 32px));
+  .container-wide {
+    width: min(var(--container-wide), calc(100% - var(--page-gutter-mobile)));
+  }
+
+  .container-readable {
+    width: min(var(--container-readable), calc(100% - var(--page-gutter-mobile)));
   }
 
   .header-inner {
@@ -127,11 +130,11 @@
   }
 
   .features {
-    padding: 72px 0 88px;
+    padding: var(--section-padding-block-mobile);
   }
 
   .features-inner {
-    gap: 76px;
+    gap: var(--section-stack-gap-mobile);
   }
 
   .feature-block {
@@ -150,7 +153,7 @@
   }
 
   .reviews {
-    padding: 80px 0 92px;
+    padding: var(--section-padding-block-mobile);
   }
 
   .reviews-head {
@@ -159,10 +162,6 @@
 
   .download-cta {
     padding: 56px 0;
-  }
-
-  .download-cta .wrap {
-    width: min(var(--container), calc(100% - 32px));
   }
 
   .download-cta__inner {
@@ -240,8 +239,84 @@
   }
 
   .legal-document {
-    width: min(var(--content-container), calc(100% - 32px));
     padding: 72px 0 88px;
+  }
+
+  .about-hero {
+    min-height: auto;
+  }
+
+  .about-hero__inner {
+    padding: 112px 0 72px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(40px, 11vw, 50px);
+  }
+
+  .about-hero p:not(.kicker) {
+    font-size: 17px;
+  }
+
+  .section-band {
+    padding: var(--section-padding-block-mobile);
+  }
+
+  .split-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .section-title {
+    font-size: clamp(32px, 8.8vw, 44px);
+  }
+
+  .about-build__panel,
+  .media-card,
+  .visual-band,
+  .glass-item,
+  .about-jobs__inner {
+    border-radius: var(--radius-surface-mobile);
+  }
+
+  .media-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .about-team {
+    margin-top: var(--space-10);
+  }
+
+  .media-card,
+  .media-card img {
+    min-height: 188px;
+  }
+
+  .media-card__content {
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-4);
+  }
+
+  .visual-band {
+    min-height: auto;
+    padding: var(--space-4);
+  }
+
+  .glass-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass-item {
+    min-height: 0;
+    margin: 0;
+  }
+
+  .about-jobs__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-6);
   }
 
   .device-frame--iphone {
