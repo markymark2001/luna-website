@@ -50,11 +50,17 @@ permalink: index.html
           <h2>{{ feature.title }}</h2>
           <p>{{ feature.copy }}</p>
         </div>
-        <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
-          <div class="device-frame__screen">
-            <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
-          </div>
-        </figure>
+        {% if loop.first %}
+          <figure class="feature-direct-visual feature-device" aria-label="Taia app feature preview">
+            <img src="/assets/this.png" alt="Taia app preview">
+          </figure>
+        {% else %}
+          <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
+            <div class="device-frame__screen">
+              <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
+            </div>
+          </figure>
+        {% endif %}
       </article>
       {% endfor %}
     </div>

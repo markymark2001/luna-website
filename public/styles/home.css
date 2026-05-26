@@ -226,6 +226,17 @@
   width: min(320px, 76vw);
 }
 
+.feature-direct-visual {
+  background: transparent;
+}
+
+.feature-direct-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  object-fit: contain;
+}
+
 .feature-device::after {
   position: absolute;
   right: 9%;
