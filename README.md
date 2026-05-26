@@ -1,64 +1,50 @@
 # Luna Website
 
-Official website for Luna - AI-Powered Astrology mobile app.
+Official website for Taia, the astrology mobile app.
 
 This website hosts the Privacy Policy and Terms of Service required for App Store submission.
 
 ## Contents
 
-- `index.html` - Landing page
-- `privacy.html` - Privacy Policy
-- `terms.html` - Terms of Service
-- `style.css` - Stylesheet
+- `src/pages/` - Authored page content
+- `src/_includes/` - Shared Eleventy layouts and partials
+- `public/` - Static assets copied to the deployed site root
+- `dist/` - Generated site output, ignored by git
+- `.github/workflows/pages.yml` - GitHub Pages build and deploy workflow
+
+## Hosting Contract
+
+This site is built for the custom domain root at `https://lunaapp.io/`.
+Templates use root-relative URLs such as `/style.css`, `/privacy/`, and
+`/contact/`, so the generated artifact is not intended to be served from a
+GitHub Pages project subpath.
+
+GitHub Pages must publish from the Actions workflow artifact, and
+`public/CNAME` must remain present so the built artifact contains `dist/CNAME`.
 
 ## Setup Instructions
 
-### 1. Create GitHub Repository
+### 1. Repository
 
 ```bash
-# Navigate to the website directory
 cd luna-website
-
-# Initialize git repository
-git init
-
-# Add all files
-git add .
-
-# Create initial commit
-git commit -m "Initial Luna website with privacy policy and terms"
-
-# Create repository on GitHub (via web interface or gh CLI)
-# If using gh CLI:
-gh repo create luna-website --public --source=. --remote=origin --push
-
-# If creating manually on GitHub, add remote and push:
-git remote add origin https://github.com/YOUR_USERNAME/luna-website.git
-git branch -M main
-git push -u origin main
+git remote -v
 ```
 
-### 2. Enable GitHub Pages
+Expected repository: `https://github.com/markymark2001/luna-website`.
 
-**Option A: Via GitHub Web Interface (Recommended)**
+### 2. Enable GitHub Pages Actions
 
-1. Go to your repository: `https://github.com/YOUR_USERNAME/luna-website`
+Use the repository Pages settings to select **GitHub Actions** as the publishing
+source. The included workflow builds `dist/` and deploys that artifact.
+
+1. Go to `https://github.com/markymark2001/luna-website`.
 2. Click **Settings** (top navigation)
 3. Click **Pages** (left sidebar)
 4. Under "Build and deployment":
-   - Source: **Deploy from a branch**
-   - Branch: **main** (or **master**)
-   - Folder: **/ (root)**
+   - Source: **GitHub Actions**
 5. Click **Save**
-6. Wait 1-2 minutes for deployment
-
-Your site will be available at: `https://YOUR_USERNAME.github.io/luna-website/`
-
-**Option B: Via GitHub CLI**
-
-```bash
-gh repo edit --enable-pages --pages-branch main
-```
+6. Confirm Pages uses the `lunaapp.io` custom domain.
 
 ### 3. Connect Custom Domain (lunaapp.io)
 
@@ -74,9 +60,7 @@ Log into your domain registrar (where you purchased lunaapp.io) and add these DN
 | A | @ | 185.199.109.153 | 3600 |
 | A | @ | 185.199.110.153 | 3600 |
 | A | @ | 185.199.111.153 | 3600 |
-| CNAME | www | YOUR_USERNAME.github.io | 3600 |
-
-**Replace `YOUR_USERNAME` with your actual GitHub username.**
+| CNAME | www | markymark2001.github.io | 3600 |
 
 **Popular Domain Registrars:**
 
@@ -135,8 +119,8 @@ After DNS propagation, your website will be accessible at:
 
 - `https://lunaapp.io`
 - `https://www.lunaapp.io`
-- `https://lunaapp.io/privacy.html`
-- `https://lunaapp.io/terms.html`
+- `https://lunaapp.io/privacy/`
+- `https://lunaapp.io/terms/`
 
 **Test your setup:**
 
@@ -144,7 +128,7 @@ After DNS propagation, your website will be accessible at:
 # Check DNS records (should show GitHub IPs)
 dig lunaapp.io A
 
-# Check CNAME (should show your GitHub Pages URL)
+# Check CNAME (should show the GitHub Pages host)
 dig www.lunaapp.io CNAME
 
 # Test HTTPS (should return 200 OK)
@@ -157,8 +141,8 @@ Once your website is live, use these URLs in App Store Connect:
 
 **App Information:**
 - **Marketing URL:** `https://lunaapp.io`
-- **Privacy Policy URL:** `https://lunaapp.io/privacy.html`
-- **Terms of Service URL:** `https://lunaapp.io/terms.html` (if requested)
+- **Privacy Policy URL:** `https://lunaapp.io/privacy/`
+- **Terms of Service URL:** `https://lunaapp.io/terms/` (if requested)
 
 **Subscription Information:**
 - Include privacy policy and terms URLs in subscription descriptions
@@ -168,8 +152,14 @@ Once your website is live, use these URLs in App Store Connect:
 To update the website content:
 
 ```bash
-# Make your edits to HTML/CSS files
-vim privacy.html  # or use your preferred editor
+# Make content edits in src/pages or shared shell edits in src/_includes
+vim src/pages/privacy.html  # or use your preferred editor
+
+# Build the generated site locally
+npm run build
+
+# Preview with Eleventy's dev server
+npm run dev
 
 # Commit changes
 git add .
@@ -180,6 +170,8 @@ git push origin main
 
 # GitHub Pages will automatically redeploy (1-2 minutes)
 ```
+
+Do not edit `dist/` directly. It is generated output and is rebuilt by GitHub Actions.
 
 ## Troubleshooting
 
@@ -207,11 +199,11 @@ git push origin main
 
 ### 404 Error on Subpages
 
-**Problem:** `lunaapp.io` works but `lunaapp.io/privacy.html` shows 404
+**Problem:** `lunaapp.io` works but `lunaapp.io/privacy/` shows 404
 
 **Solutions:**
-1. Ensure files are in the root directory (not in a subdirectory)
-2. Check file names are lowercase and match exactly: `privacy.html`, not `Privacy.html`
+1. Ensure GitHub Pages is publishing from the Actions workflow artifact, not from the repository root
+2. Run `npm run build` and confirm `dist/privacy/index.html` and `dist/terms/index.html` exist
 3. Clear GitHub Pages cache by making a small commit and pushing
 
 ### Cloudflare Issues
@@ -227,12 +219,12 @@ git push origin main
 
 Before submitting to App Store, verify:
 
-- [ ] Privacy Policy is accessible at `https://lunaapp.io/privacy.html`
-- [ ] Terms of Service is accessible at `https://lunaapp.io/terms.html`
+- [ ] Privacy Policy is accessible at `https://lunaapp.io/privacy/`
+- [ ] Terms of Service is accessible at `https://lunaapp.io/terms/`
 - [ ] HTTPS is enabled (green padlock in browser)
 - [ ] Links work on mobile devices (test in Safari on iPhone)
 - [ ] Contact email is correct and monitored: mark@mediakey.io
-- [ ] Company name is correct: TEAM DECA LTD
+- [ ] Company name is correct: MediaKey Solutions Inc.
 - [ ] Effective dates are current
 - [ ] Age restriction is 17+ (matches App Store rating)
 
@@ -252,8 +244,8 @@ Before submitting to App Store, verify:
 
 For questions about this website setup, contact:
 - Email: mark@mediakey.io
-- GitHub: https://github.com/YOUR_USERNAME/luna-website
+- GitHub: https://github.com/markymark2001/luna-website
 
 ---
 
-**Created for TEAM DECA LTD - Luna App**
+**Created for MediaKey Solutions Inc. - Luna App**

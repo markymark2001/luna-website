@@ -18,6 +18,7 @@ repo helpers, and relevant MCP/plugin capabilities before inventing workflows or
 Make reasonable assumptions when safe. Stop with a concrete blocker when progress requires missing access,
 missing external setup, an unsafe production action, or an explicit user decision.
 
+Read `architecture.md` before planning or making code changes.
 Scan `docs/` for relevant durable context before editing.
 
 Before implementing anything, comprehensive web research is required: always use web search, official SDK/framework/library/product documentation, and multiple reputable examples. Prefer established patterns over invention.
@@ -43,9 +44,6 @@ Workflows are procedural runbooks.
   read and follow `docs/workflows/systematic-debugging.md` before proposing or applying fixes.
 - Spec writing or product decision specs:
   read and follow `docs/workflows/specs.md` before acting.
-- Codebase, branch, PR, or implementation review when that review is your sole task:
-  read and follow `docs/workflows/reviewing.md` before acting. If you are implementing
-  changes and only running review as part of the normal end-to-end flow, do not use this workflow.
 - Runtime evidence selected by the agent, local website smoke checks, or browser console inspection:
   read and follow `docs/workflows/runtime-evidence.md` only when the agent selects runtime evidence,
   runs local website actions, or inspects browser console output.

@@ -20,10 +20,16 @@ describes browser-visible behavior.
 
 ## Local Server
 
-Serve the site from the repo root:
+Build the generated site:
 
 ```bash
-python3 -m http.server 8080 --bind 127.0.0.1
+npm run build
+```
+
+Serve the generated site from `dist`:
+
+```bash
+python3 -m http.server 8080 --bind 127.0.0.1 --directory dist
 ```
 
 If port `8080` is busy, choose another local port and state the exact URL used.
@@ -38,9 +44,9 @@ smallest set of pages affected by the change.
 Default pages:
 
 - `http://localhost:8080/`
-- `http://localhost:8080/support.html`
-- `http://localhost:8080/privacy.html`
-- `http://localhost:8080/terms.html`
+- `http://localhost:8080/contact/`
+- `http://localhost:8080/privacy/`
+- `http://localhost:8080/terms/`
 
 Minimum browser evidence:
 
@@ -57,9 +63,9 @@ Use command-line checks when they prove something browser automation does not:
 
 ```bash
 curl -I http://localhost:8080/
-curl -I http://localhost:8080/privacy.html
-curl -I http://localhost:8080/terms.html
-curl -I http://localhost:8080/support.html
+curl -I http://localhost:8080/privacy/
+curl -I http://localhost:8080/terms/
+curl -I http://localhost:8080/contact/
 ```
 
 Expected result for public pages is `200 OK`.

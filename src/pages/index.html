@@ -1,0 +1,84 @@
+---
+layout: layouts/base.njk
+title: Taia
+description: Taia is a personal astrology app.
+bodyClass: home-page
+stylesheetHref: /style.css?v=20260524-22
+pageScripts:
+  - /scripts/home.js
+permalink: index.html
+---
+<section class="video-hero" aria-labelledby="video-hero-title">
+  <video class="video-hero__media" muted loop playsinline preload="metadata" aria-hidden="true">
+    <source src="https://website.lunaapp.io/homepage-background.mp4" type="video/mp4">
+  </video>
+  <div class="video-hero__overlay" aria-hidden="true"></div>
+
+  <div class="wrap video-hero__content">
+    <div class="video-hero__top">
+      <h1 id="video-hero-title" class="hero-logo hero-logo--mark" aria-label="TAIA">
+        <span class="brand-logo brand-logo--hero-top" aria-hidden="true"></span>
+      </h1>
+    </div>
+    <div class="video-hero__bottom">
+      <p class="hero-subtitle">Find answers and manifest your future</p>
+      <div class="hero-rating" aria-label="Rated 4.8 stars, with more than 12 thousand readings a week">
+        <span class="hero-rating__stars" aria-hidden="true">★★★★★</span>
+        <span>4.8</span>
+        <span class="hero-rating__dot" aria-hidden="true"></span>
+        <span>12k+ readings a week</span>
+      </div>
+      <a class="button primary hero-button" href="#get-the-app" aria-label="Get started">
+        <span>Get started <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
+        <span aria-hidden="true">Get started <svg class="button-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66 133.66l-80 80a8 8 0 0 1-11.32-11.32L164.69 128 90.34 53.66a8 8 0 0 1 11.32-11.32l80 80a8 8 0 0 1 0 11.32z"/></svg></span>
+      </a>
+      <a class="hero-scroll-cue" href="#get-the-app" aria-label="Scroll to the next section">
+        <svg viewBox="0 0 256 256" aria-hidden="true">
+          <path d="M213.66 101.66l-80 80a8 8 0 0 1-11.32 0l-80-80a8 8 0 0 1 11.32-11.32L128 164.69l74.34-74.35a8 8 0 0 1 11.32 11.32z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="get-the-app" class="features" aria-label="Taia features">
+    <div class="wrap features-inner">
+      {% for feature in home.features %}
+      <article class="feature-block{% if feature.reverse %} feature-block--reverse{% endif %}">
+        <div class="feature-copy">
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.copy }}</p>
+        </div>
+        <figure class="device-frame device-frame--iphone feature-device" aria-label="Taia app feature preview">
+          <div class="device-frame__screen">
+            <img src="/assets/hero-app-screenshot.png" alt="Taia app screenshot">
+          </div>
+        </figure>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews" aria-label="User reviews">
+    <div class="review-marquee" aria-label="User reviews">
+      {% for row in home.reviewRows %}
+      <div class="review-track{% if row.reverse %} review-track--reverse{% endif %}">
+        <div class="review-group">
+          {% for review in row.reviews %}
+          <article class="review-card">
+            <div class="review-card__top">
+              <div class="review-person"><span class="review-avatar">{{ review.initials }}</span><span><b>{{ review.name }}</b><small>{{ review.handle }}</small></span></div>
+              <span class="review-stars" aria-hidden="true">★★★★★</span>
+            </div>
+            <h3>{{ review.title }}</h3>
+            <p>{{ review.copy }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</main>
